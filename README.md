@@ -99,5 +99,5 @@ GSCloudPlugin.PrintDraw({
 ----|-----|------|------
 | DashStyle | 线条样式，值：Solid（实线）、Dash（由划线段组成的直线）、Dot（由点构成的直线）、DashDot（由重复的划线点图案构成的直线）、DashDotDot（由重复的划线点点图案构成的直线）| String   | Solid|
 | StrokeWidth | 描边宽度 | float   | 0 |
-| Color | 颜色，RGBA格式 | String | 0,0,0  |
+| Color | 颜色，RGBA用","隔开 | String | 0,0,0  |
 | Points | 点，由很多个点组成线条，如："0,0,10,0,10,10,0,10,0,0" 组成一个正方形，每两个数组成一个坐标点xy，坐标原点为坐上方 | Array(float) | 无  |
