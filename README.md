@@ -3,6 +3,9 @@
 - 浏览器打印PDF/HTML/图片/自定义绘图。
 - 使用静默方式打印。
 
+## 安装
+- [下载地址](https://raw.githubusercontent.com/gscloudplugin/gscloudplugin/master/光速云插件3.1.0.zip)
+
 ## 文档
 ### 打印PDF
 ```
