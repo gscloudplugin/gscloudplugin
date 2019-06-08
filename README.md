@@ -5,6 +5,7 @@
 
 ## 安装
 - [下载地址](https://raw.githubusercontent.com/gscloudplugin/gscloudplugin/master/光速云插件3.1.0.zip)
+- 解压zip文件后，内含安装和demo文件
 
 ## 文档
 ### 打印PDF
