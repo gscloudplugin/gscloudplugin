@@ -5,6 +5,12 @@
 
 ## 文档
 ### 打印PDF
----
-GSCloudPlugin.PrintPdf
----
+```
+GSCloudPlugin.PrintPdf({
+			Title:"PDF170916",
+			Width: 100,
+			Height: 150,
+			Url: "https://domain/demo.pdf",
+			PrinterIndex: -1
+		});
+```
