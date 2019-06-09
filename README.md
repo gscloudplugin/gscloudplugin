@@ -9,12 +9,12 @@
 
 ## 文档
 - 关于尺寸相关单位统一为：毫米
-- [打印PDF](#一、打印PDF)
+- [打印PDF](#打印PDF)
 - [打印图片](#打印图片)
 - [打印HTML](#打印HTML)
 - [打印自定义绘图](#打印自定义绘图)
 
-<a href="#一、打印PDF"></a>
+<a href="#打印PDF"></a>
 ### 一、打印PDF
 ```
 GSCloudPlugin.PrintPdf({
@@ -34,7 +34,7 @@ GSCloudPlugin.PrintPdf({
 | Url | PDF文件地址 | String | 无  |
 | PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1  |
 <a href="#打印图片"></a>
-### 二、打印图片
+### 打印图片
 ```
 GSCloudPlugin.PrintImage({
 			Title:"PNG0001",
@@ -54,7 +54,7 @@ GSCloudPlugin.PrintImage({
 | PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1  |
 <a href="#打印HTML"></a>
 <a href="#Text的字段说明1"></a>
-### 三、打印HTML
+### 打印HTML
 ```
 GSCloudPlugin.PrintHtml({
 			Title:"HTML0001",
