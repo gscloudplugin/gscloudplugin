@@ -94,6 +94,8 @@ GSCloudPlugin.PrintDraw({
 | Texts | 文本 | Array([Text](#Text的字段说明)) | 无  |
 | Lines | 线条 | Array(Line) | 无  |
 | Barcodes | 条码 | Array(Barcode) | 无  |
+
+<a href="#Text的字段说明"></a>
 ### Text的字段说明
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
