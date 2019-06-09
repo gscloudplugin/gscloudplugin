@@ -15,7 +15,7 @@
 - [打印自定义绘图](#打印自定义绘图)
 
 <a href="#打印PDF"></a>
-### 打印PDF
+### 1. 打印PDF
 ```
 GSCloudPlugin.PrintPdf({
 			Title:"PDF0001",
