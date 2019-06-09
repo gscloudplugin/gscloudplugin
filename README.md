@@ -91,10 +91,11 @@ GSCloudPlugin.PrintDraw({
 | Width | 纸张宽度，单位毫米 | Int   | 0 |
 | Height | 纸张高度，单位毫米 | Int | 0  |
 | PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1  |
-| Texts | 文本 | Array(Text) | 无  |
+| Texts | 文本 | Array([Text](#Text的字段说明)) | 无  |
 | Lines | 线条 | Array(Line) | 无  |
 | Barcodes | 条码 | Array(Barcode) | 无  |
 ### Text的字段说明
+<a href="#Text的字段说明"></a>
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
 | Content | 内容| String   | 无 |
