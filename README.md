@@ -75,7 +75,7 @@ GSCloudPlugin.PrintHtml({
 | Url | HTML网页地址 | String | 无  |
 | PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1  |
 <a href="#打印自定义绘图"></a>
-### 四、打印自定义绘图
+### 打印自定义绘图
 ```
 GSCloudPlugin.PrintDraw({
 			Title:"DRAW0001",
