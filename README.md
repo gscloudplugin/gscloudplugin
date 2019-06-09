@@ -9,12 +9,12 @@
 
 ## 文档
 - 关于尺寸相关单位统一为：毫米
-- [一、打印PDF](#打印PDF)
+- [打印PDF](#一、打印PDF)
 - [打印图片](#打印图片)
 - [打印HTML](#打印HTML)
 - [打印自定义绘图](#打印自定义绘图)
 
-<a href="#打印PDF"></a>
+<a href="#一、打印PDF"></a>
 ### 一、打印PDF
 ```
 GSCloudPlugin.PrintPdf({
