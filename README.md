@@ -15,7 +15,7 @@
 - [打印自定义绘图](#打印自定义绘图)
 
 <a href="#打印PDF"></a>
-### [一、]打印PDF
+### 打印PDF
 ```
 GSCloudPlugin.PrintPdf({
 			Title:"PDF0001",
@@ -25,7 +25,7 @@ GSCloudPlugin.PrintPdf({
 			PrinterIndex: -1
 		       });
 ```
-### 字段说明
+#### 字段说明
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
 | Title | 标题| String   | 默认GUID格式字符串|
@@ -44,7 +44,7 @@ GSCloudPlugin.PrintImage({
 			PrinterIndex: -1
 		       });
 ```
-### 字段说明
+#### 字段说明
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
 | Title | 标题| String   | 默认GUID格式字符串|
@@ -64,7 +64,7 @@ GSCloudPlugin.PrintHtml({
 			PrinterIndex: printerIndex
 		       });
 ```
-### 字段说明
+#### 字段说明
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
 | Title | 标题| String   | 默认GUID格式字符串|
@@ -91,7 +91,7 @@ GSCloudPlugin.PrintDraw({
 			PrinterIndex: -1
 		});
 ```
-### 字段说明
+#### 字段说明
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
 | Title | 标题| String | 默认GUID格式字符串|
@@ -103,7 +103,7 @@ GSCloudPlugin.PrintDraw({
 | Barcodes | 条码 | Array([Barcode](#Barcode的字段说明)) | 无 |
 
 <a href="#Text的字段说明"></a>
-### Text的字段说明
+#### Text的字段说明
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
 | Content | 内容| String | 无 |
@@ -119,7 +119,7 @@ GSCloudPlugin.PrintDraw({
 | VerticalAlignment | 文本垂直对齐方式。值：Top（顶部对齐）、Center（居中对齐）、Bottom（底部对齐） | String | Top |
 | FontStyle | 字体样式。值：Regular（普通文本）、Bold（加粗文本）、Italic（倾斜文本）、Underline（带下划线的文本）、Strikeout（中间有直线通过的文本） | String | Regular |
 <a href="#Line的字段说明"></a>
-### Line的字段说明
+#### Line的字段说明
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
 | DashStyle | 线条样式。值：Solid（实线）、Dash（由划线段组成的直线）、Dot（由点构成的直线）、DashDot（由重复的划线点图案构成的直线）、DashDotDot（由重复的划线点点图案构成的直线）| String | Solid |
@@ -127,7 +127,7 @@ GSCloudPlugin.PrintDraw({
 | Color | 颜色。RGBA用","隔开 | String | 0,0,0 |
 | Points | 点。由很多个点组成线条，如："0,0,10,0,10,10,0,10,0,0" 组成一个正方形，每两个数值组成一个坐标点xy，坐标原点为左上方 | Array(float) | 无 |
 <a href="#Barcode的字段说明"></a>
-### Barcode的字段说明
+#### Barcode的字段说明
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
 | Width | 条码宽度 | float | 0 |
@@ -138,7 +138,7 @@ GSCloudPlugin.PrintDraw({
 | Text | 文本。 | [BarcodeText](#BarcodeText的字段说明) | 无  |
 | TextPosition | 文本位置。值：Top（在条码的上方）、Bottom（在条码的下方） | String | Bottom  |
 <a href="#BarcodeText的字段说明"></a>
-### BarcodeText的字段说明
+#### BarcodeText的字段说明
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
 | Content | 内容。如果不需要显示文本内容，则只设置此字段值，不设置其他字段值 | String | 无 |
