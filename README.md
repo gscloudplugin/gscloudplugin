@@ -32,7 +32,6 @@ GSCloudPlugin.PrintPdf({
 | Height | 纸张高度，单位毫米 | Int | 0  |
 | Url | PDF文件地址 | String | 无  |
 | PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1  |
-
 <a href="#打印图片"></a>
 ### 二、打印图片
 ```
@@ -71,7 +70,6 @@ GSCloudPlugin.PrintHtml({
 | Height | 纸张高度，单位毫米 | Int | 0  |
 | Url | HTML网页地址 | String | 无  |
 | PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1  |
-
 <a href="#打印自定义绘图"></a>
 ### 四、打印自定义绘图
 ```
@@ -94,13 +92,13 @@ GSCloudPlugin.PrintDraw({
 ### 字段说明
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
-| Title | 标题| String   | 默认GUID格式字符串|
+| Title | 标题| String | 默认GUID格式字符串|
 | Width | 纸张宽度，单位毫米 | Int   | 0 |
 | Height | 纸张高度，单位毫米 | Int | 0  |
-| PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1  |
+| PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1 |
 | Texts | 文本 | Array([Text](#Text的字段说明)) | 无  |
 | Lines | 线条 | Array([Line](#Line的字段说明)) | 无  |
-| Barcodes | 条码 | Array([Barcode](#Barcode的字段说明)) | 无  |
+| Barcodes | 条码 | Array([Barcode](#Barcode的字段说明)) | 无 |
 
 <a href="#Text的字段说明"></a>
 ### Text的字段说明
@@ -122,10 +120,10 @@ GSCloudPlugin.PrintDraw({
 ### Line的字段说明
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
-| DashStyle | 线条样式。值：Solid（实线）、Dash（由划线段组成的直线）、Dot（由点构成的直线）、DashDot（由重复的划线点图案构成的直线）、DashDotDot（由重复的划线点点图案构成的直线）| String | Solid|
+| DashStyle | 线条样式。值：Solid（实线）、Dash（由划线段组成的直线）、Dot（由点构成的直线）、DashDot（由重复的划线点图案构成的直线）、DashDotDot（由重复的划线点点图案构成的直线）| String | Solid |
 | StrokeWidth | 描边宽度 | float | 0 |
-| Color | 颜色。RGBA用","隔开 | String | 0,0,0  |
-| Points | 点。由很多个点组成线条，如："0,0,10,0,10,10,0,10,0,0" 组成一个正方形，每两个数值组成一个坐标点xy，坐标原点为左上方 | Array(float) | 无  |
+| Color | 颜色。RGBA用","隔开 | String | 0,0,0 |
+| Points | 点。由很多个点组成线条，如："0,0,10,0,10,10,0,10,0,0" 组成一个正方形，每两个数值组成一个坐标点xy，坐标原点为左上方 | Array(float) | 无 |
 <a href="#Barcode的字段说明"></a>
 ### Barcode的字段说明
 属性 | 说明 | 类型 | 默认值
