@@ -98,7 +98,8 @@ GSCloudPlugin.PrintDraw({
 | Width | 纸张宽度，单位毫米 | Int   | 0 |
 | Height | 纸张高度，单位毫米 | Int | 0  |
 | PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1 |
-| Texts | 文本。<font color=red>该字段也适用于PDF、图片、HTML打印</font> | Array([Text](#Text的字段说明)) | 无  |
+| Texts | 文本。<font color=red>该字段也适用于PDF、图片、HTML打印</font>
+<font color=gray size=72>color=gray</font> | Array([Text](#Text的字段说明)) | 无  |
 | Lines | 线条。<font color=red>该字段也适用于PDF、图片、HTML打印</font> | Array([Line](#Line的字段说明)) | 无  |
 | Barcodes | 条码。<font color=red>该字段也适用于PDF、图片、HTML打印</font> | Array([Barcode](#Barcode的字段说明)) | 无 |
 
