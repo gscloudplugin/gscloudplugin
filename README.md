@@ -93,7 +93,7 @@ GSCloudPlugin.PrintDraw({
 | PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1  |
 | Texts | 文本 | Array([Text](#Text的字段说明)) | 无  |
 | Lines | 线条 | Array([Line](#Line的字段说明)) | 无  |
-| Barcodes | 条码 | Array(Barcode) | 无  |
+| Barcodes | 条码 | Array([Barcode](#Barcode的字段说明)) | 无  |
 
 <a href="#Text的字段说明"></a>
 ### Text的字段说明
@@ -115,7 +115,26 @@ GSCloudPlugin.PrintDraw({
 ### Line的字段说明
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
-| DashStyle | 线条样式。值：Solid（实线）、Dash（由划线段组成的直线）、Dot（由点构成的直线）、DashDot（由重复的划线点图案构成的直线）、DashDotDot（由重复的划线点点图案构成的直线）| String   | Solid|
-| StrokeWidth | 描边宽度 | float   | 0 |
+| DashStyle | 线条样式。值：Solid（实线）、Dash（由划线段组成的直线）、Dot（由点构成的直线）、DashDot（由重复的划线点图案构成的直线）、DashDotDot（由重复的划线点点图案构成的直线）| String | Solid|
+| StrokeWidth | 描边宽度 | float | 0 |
 | Color | 颜色。RGBA用","隔开 | String | 0,0,0  |
 | Points | 点。由很多个点组成线条，如："0,0,10,0,10,10,0,10,0,0" 组成一个正方形，每两个数值组成一个坐标点xy，坐标原点为左上方 | Array(float) | 无  |
+<a href="#Barcode的字段说明"></a>
+### Barcode的字段说明
+属性 | 说明 | 类型 | 默认值
+----|-----|------|------
+| Width | 条码宽度 | float | 0 |
+| Height | 条码高度 | float | 0 |
+| Format | 条码格式。值：AZTEC、CODABAR、CODE_39、CODE_93、CODE_128、DATA_MATRIX、EAN_8、EAN_13、ITF、MAXICODE、PDF_417、QR_CODE（二维码）、RSS_14、RSS_EXPANDED、UPC_A、UPC_E、All_1D、UPC_EAN_EXTENSION、MSI、PLESSEY、IMB | String | CODE_128  |
+| X | 起始坐标X。坐标原点为左上方 | float | 0 |
+| Y | 起始坐标Y。坐标原点为左上方 | float | 0 |
+| Text | 文本。 | [BarcodeText](#BarcodeText的字段说明) | 无  |
+| TextPosition | 文本位置。值：Top（在条码的上方）、Bottom（在条码的下方） | String | Bottom  |
+<a href="#BarcodeText的字段说明"></a>
+### BarcodeText的字段说明
+属性 | 说明 | 类型 | 默认值
+----|-----|------|------
+| Content | 内容。如果不需要显示文本内容，则只设置此字段值，不设置其他字段值 | String | 无 |
+| FontSize | 文字大小 | float | 0 |
+| FontFamilies | 字体。取数组中客户端系统中第一个存在的字体 | Array(String) | 系统字体 |
+| Color | 颜色。RGBA用","隔开 | String | 0,0,0 |
