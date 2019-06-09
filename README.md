@@ -28,7 +28,7 @@ GSCloudPlugin.PrintPdf({
 #### 字段说明
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
-| Title | 标题| String   | 默认GUID格式字符串|
+| Title | 标题| String | 默认GUID格式字符串|
 | Width | 纸张宽度，单位毫米 | Int   | 0 |
 | Height | 纸张高度，单位毫米 | Int | 0  |
 | Url | PDF文件地址 | String | 无  |
@@ -47,10 +47,10 @@ GSCloudPlugin.PrintImage({
 #### 字段说明
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
-| Title | 标题| String   | 默认GUID格式字符串|
-| Width | 纸张宽度，单位毫米 | Int   | 0 |
+| Title | 标题| String | 默认GUID格式字符串|
+| Width | 纸张宽度，单位毫米 | Int | 0 |
 | Height | 纸张高度，单位毫米 | Int | 0  |
-| Url | 图片文件地址 | String | 无  |
+| Url | 图片文件地址 | String | 无 |
 | PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1  |
 <a href="#打印HTML"></a>
 <a href="#Text的字段说明1"></a>
@@ -67,8 +67,8 @@ GSCloudPlugin.PrintHtml({
 #### 字段说明
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
-| Title | 标题| String   | 默认GUID格式字符串|
-| Width | 纸张宽度，单位毫米 | Int   | 0 |
+| Title | 标题| String | 默认GUID格式字符串|
+| Width | 纸张宽度，单位毫米 | Int | 0 |
 | Height | 纸张高度，单位毫米 | Int | 0  |
 | Url | HTML网页地址 | String | 无  |
 | PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1  |
@@ -94,12 +94,12 @@ GSCloudPlugin.PrintDraw({
 #### 字段说明
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
-| Title | 标题| String | 默认GUID格式字符串|
-| Width | 纸张宽度，单位毫米 | Int   | 0 |
-| Height | 纸张高度，单位毫米 | Int | 0  |
+| Title | 标题| String | 默认GUID格式字符串 |
+| Width | 纸张宽度，单位毫米 | Int | 0 |
+| Height | 纸张高度，单位毫米 | Int | 0 |
 | PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1 |
-| Texts | 文本。**该字段也适用于PDF、图片、HTML打印** | Array([Text](#Text的字段说明)) | 无  |
-| Lines | 线条。**该字段也适用于PDF、图片、HTML打印** | Array([Line](#Line的字段说明)) | 无  |
+| Texts | 文本。**该字段也适用于PDF、图片、HTML打印** | Array([Text](#Text的字段说明)) | 无 |
+| Lines | 线条。**该字段也适用于PDF、图片、HTML打印** | Array([Line](#Line的字段说明)) | 无 |
 | Barcodes | 条码。**该字段也适用于PDF、图片、HTML打印** | Array([Barcode](#Barcode的字段说明)) | 无 |
 
 <a href="#Text的字段说明"></a>
@@ -108,7 +108,7 @@ GSCloudPlugin.PrintDraw({
 ----|-----|------|------
 | Content | 内容| String | 无 |
 | FontSize | 文字大小 | float | 0 |
-| FontFamilies | 字体。取数组中客户端系统中第一个存在的字体 | Array(String) | 系统字体 |
+| FontFamilies | 字体。取数组中在客户端系统中第一个存在的字体 | Array(String) | 系统字体 |
 | Color | 颜色。RGBA用","隔开 | String | 0,0,0 |
 | X | 起始坐标X。坐标原点为左上方 | float | 0 |
 | Y | 起始坐标Y。坐标原点为左上方 | float | 0 |
@@ -143,5 +143,5 @@ GSCloudPlugin.PrintDraw({
 ----|-----|------|------
 | Content | 内容。如果不需要显示文本内容，则只设置此字段值，不设置其他字段值 | String | 无 |
 | FontSize | 文字大小 | float | 0 |
-| FontFamilies | 字体。取数组中客户端系统中第一个存在的字体 | Array(String) | 系统字体 |
+| FontFamilies | 字体。取数组中在客户端系统中第一个存在的字体 | Array(String) | 系统字体 |
 | Color | 颜色。RGBA用","隔开 | String | 0,0,0 |
