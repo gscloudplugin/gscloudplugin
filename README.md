@@ -98,9 +98,9 @@ GSCloudPlugin.PrintDraw({
 | Width | 纸张宽度，单位毫米 | Int   | 0 |
 | Height | 纸张高度，单位毫米 | Int | 0  |
 | PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1 |
-| Texts | 文本。`该字段也适用于PDF、图片、HTML打印` | Array([Text](#Text的字段说明)) | 无  |
-| Lines | 线条。`该字段也适用于PDF、图片、HTML打印` | Array([Line](#Line的字段说明)) | 无  |
-| Barcodes | 条码。`该字段也适用于PDF、图片、HTML打印` | Array([Barcode](#Barcode的字段说明)) | 无 |
+| Texts | 文本。**该字段也适用于PDF、图片、HTML打印** | Array([Text](#Text的字段说明)) | 无  |
+| Lines | 线条。**该字段也适用于PDF、图片、HTML打印** | Array([Line](#Line的字段说明)) | 无  |
+| Barcodes | 条码。**该字段也适用于PDF、图片、HTML打印** | Array([Barcode](#Barcode的字段说明)) | 无 |
 
 <a href="#Text的字段说明"></a>
 #### Text的字段说明
