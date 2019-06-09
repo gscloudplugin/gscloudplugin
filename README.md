@@ -13,7 +13,9 @@
 - [打印图片](#打印图片)
 - [打印HTML](#打印HTML)
 - [打印自定义绘图](#打印自定义绘图)
+
 <a href="#PDF打印"></a>
+
 ### 一、打印PDF
 ```
 GSCloudPlugin.PrintPdf({
