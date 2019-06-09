@@ -13,7 +13,7 @@
 - [打印图片](#打印图片)
 - [打印HTML](#打印HTML)
 - [打印自定义绘图](#打印自定义绘图)
-<a href="#打印PD"></a>
+<a href="#打印PDF"></a>
 ### 一、打印PDF
 ```
 GSCloudPlugin.PrintPdf({
@@ -52,7 +52,6 @@ GSCloudPlugin.PrintImage({
 | Height | 纸张高度，单位毫米 | Int | 0  |
 | Url | 图片文件地址 | String | 无  |
 | PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1  |
-
 <a href="#打印HTML"></a>
 ### 三、打印HTML
 ```
