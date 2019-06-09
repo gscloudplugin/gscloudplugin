@@ -92,7 +92,7 @@ GSCloudPlugin.PrintDraw({
 | Height | 纸张高度，单位毫米 | Int | 0  |
 | PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1  |
 | Texts | 文本 | Array([Text](#Text的字段说明)) | 无  |
-| Lines | 线条 | Array(Line) | 无  |
+| Lines | 线条 | Array([Line](#Line的字段说明)) | 无  |
 | Barcodes | 条码 | Array(Barcode) | 无  |
 
 <a href="#Text的字段说明"></a>
@@ -111,6 +111,7 @@ GSCloudPlugin.PrintDraw({
 | Alignment | 文本水平对齐方式。值：Left（左对齐）、Center（居中对齐）、Right（右对齐） | String | Left |
 | VerticalAlignment | 文本垂直对齐方式。值：Top（顶部对齐）、Center（居中对齐）、Bottom（底部对齐） | String | Top |
 | FontStyle | 字体样式。值：Regular（普通文本）、Bold（加粗文本）、Italic（倾斜文本）、Underline（带下划线的文本）、Strikeout（中间有直线通过的文本） | String | Regular |
+<a href="#Line的字段说明"></a>
 ### Line的字段说明
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
