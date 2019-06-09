@@ -118,6 +118,7 @@ GSCloudPlugin.PrintDraw({
 | Alignment | 文本水平对齐方式。值：Left（左对齐）、Center（居中对齐）、Right（右对齐） | String | Left |
 | VerticalAlignment | 文本垂直对齐方式。值：Top（顶部对齐）、Center（居中对齐）、Bottom（底部对齐） | String | Top |
 | FontStyle | 字体样式。值：Regular（普通文本）、Bold（加粗文本）、Italic（倾斜文本）、Underline（带下划线的文本）、Strikeout（中间有直线通过的文本） | String | Regular |
+
 <a href="#Line的字段说明"></a>
 #### Line的字段说明
 属性 | 说明 | 类型 | 默认值
@@ -126,17 +127,19 @@ GSCloudPlugin.PrintDraw({
 | StrokeWidth | 描边宽度 | float | 0 |
 | Color | 颜色。RGBA用","隔开 | String | 0,0,0 |
 | Points | 点。由很多个点组成线条，如："0,0,10,0,10,10,0,10,0,0" 组成一个正方形，每两个数值组成一个坐标点xy，坐标原点为左上方 | Array(float) | 无 |
+
 <a href="#Barcode的字段说明"></a>
 #### Barcode的字段说明
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
 | Width | 条码宽度 | float | 0 |
 | Height | 条码高度 | float | 0 |
-| Format | 条码格式。值：AZTEC、CODABAR、CODE_39、CODE_93、CODE_128、DATA_MATRIX、EAN_8、EAN_13、ITF、MAXICODE、PDF_417、QR_CODE（二维码）、RSS_14、RSS_EXPANDED、UPC_A、UPC_E、All_1D、UPC_EAN_EXTENSION、MSI、PLESSEY、IMB | String | CODE_128  |
+| Format | 条码格式。值：AZTEC、CODABAR、CODE_39、CODE_93、CODE_128、DATA_MATRIX、EAN_8、EAN_13、ITF、MAXICODE、PDF_417、QR_CODE（二维码）、RSS_14、RSS_EXPANDED、UPC_A、UPC_E、All_1D、UPC_EAN_EXTENSION、MSI、PLESSEY、IMB | String | CODE_128 |
 | X | 起始坐标X。坐标原点为左上方 | float | 0 |
 | Y | 起始坐标Y。坐标原点为左上方 | float | 0 |
-| Text | 文本。 | [BarcodeText](#BarcodeText的字段说明) | 无  |
+| Text | 文本。 | [BarcodeText](#BarcodeText的字段说明) | 无 |
 | TextPosition | 文本位置。值：Top（在条码的上方）、Bottom（在条码的下方） | String | Bottom  |
+
 <a href="#BarcodeText的字段说明"></a>
 #### BarcodeText的字段说明
 属性 | 说明 | 类型 | 默认值
