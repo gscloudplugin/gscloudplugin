@@ -9,6 +9,7 @@
 
 ## 文档
 - 关于尺寸相关单位统一为：毫米
+- [Text](#Text的字段说明1)
 - [PDF打印](#PDF打印)
 - [打印图片](#打印图片)
 - [打印HTML](#打印HTML)
@@ -54,6 +55,7 @@ GSCloudPlugin.PrintImage({
 | Url | 图片文件地址 | String | 无  |
 | PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1  |
 <a href="#打印HTML"></a>
+<a href="#Text的字段说明1"></a>
 ### 三、打印HTML
 ```
 GSCloudPlugin.PrintHtml({
