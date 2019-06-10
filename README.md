@@ -15,6 +15,8 @@
 - [打印自定义绘图](#4-打印自定义绘图)
 - [下载文件](#5-下载文件)
 - [异步下载文件](#6-异步下载文件)
+- [成功回调事件](#7-成功回调事件)
+- [错误回调事件](#8-错误回调事件)
 
 <a href="#打印PDF"></a>
 ### 1. 打印PDF
@@ -182,3 +184,33 @@ GSCloudPlugin.DownloadFileAsync({
 ----|-----|------|------
 | Title | 标题。将会使用此值做为文件名保存 | String | 无 |
 | Url | 文件地址 | String | 无 |
+
+<a href="#成功回调事件"></a>
+### 7. 成功回调事件
+```
+GSCloudPlugin.OnSuccess = function(result){
+			console.log(result);
+		}
+```
+#### 字段说明
+属性 | 说明 | 类型 | 默认值
+----|-----|------|------
+| Title | 标题。与调用函数时设置的Title值一致 | String | 无 |
+| OperationType | 操作类型。值：Print、GetPrinters、DownloadFile、DownloadFileAsync | String | 无 |
+| Data | 响应数据。根据调用函数不同而返回不同的数据 | object | 无 |
+| Message | 响应消息 | String | 无 |
+
+<a href="#错误回调事件"></a>
+### 8. 错误回调事件
+```
+GSCloudPlugin.OnError = function(message,code,title,operationType){
+			console.log(JSON.stringify({Message:message,Code:code,Title:title,OperationType:operationType}));
+		}
+```
+#### 字段说明
+属性 | 说明 | 类型 | 默认值
+----|-----|------|------
+| title | 标题。与调用函数时设置的Title值一致 | String | 无 |
+| operationType | 操作类型。值：Print、GetPrinters、DownloadFile、DownloadFileAsync | String | 无 |
+| message | 响应消息 | String | 无 |
+| code | 错误码 | String | 无 |
