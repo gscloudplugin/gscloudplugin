@@ -13,6 +13,8 @@
 - [打印图片](#2-打印图片)
 - [打印HTML](#3-打印HTML)
 - [打印自定义绘图](#4-打印自定义绘图)
+- [下载文件](#5-下载文件)
+- [异步下载文件](#6-异步下载文件)
 
 <a href="#打印PDF"></a>
 ### 1. 打印PDF
@@ -33,6 +35,8 @@ GSCloudPlugin.PrintPdf({
 | Height | 纸张高度，单位毫米 | Int | 0  |
 | Url | PDF文件地址 | String | 无  |
 | PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1  |
+| Pages | 指定打印页码。例：值为"2,5"，指定打印第2、3、4、5页；如果只需打印第2页，设置值为"2" | String | 无  |
+| UseFileCache | 适用于大文件。需要先调用[下载文件](#5-下载文件)或[异步下载文件](#6-异步下载文件)，**注意：并且需要设置Title一致** | bool | false  |
 
 <a href="#打印图片"></a>
 ### 2. 打印图片
@@ -150,3 +154,31 @@ GSCloudPlugin.PrintDraw({
 | FontSize | 文字大小 | float | 0 |
 | FontFamilies | 字体。取数组中在客户端系统中第一个存在的字体 | Array(String) | 系统字体 |
 | Color | 颜色。RGBA用","隔开 | String | 0,0,0 |
+
+<a href="#下载文件"></a>
+### 5. 下载文件
+```
+GSCloudPlugin.DownloadFile({
+			Title:"File0001",
+			Url: url
+		});
+```
+#### 字段说明
+属性 | 说明 | 类型 | 默认值
+----|-----|------|------
+| Title | 标题。将会使用此值做为文件名保存 | String | 无 |
+| Url | 文件地址 | String | 无 |
+
+<a href="#异步下载文件"></a>
+### 6. 异步下载文件
+```
+GSCloudPlugin.DownloadFileAsync({
+			Title:"File0002",
+			Url: url
+		});
+```
+#### 字段说明
+属性 | 说明 | 类型 | 默认值
+----|-----|------|------
+| Title | 标题。将会使用此值做为文件名保存 | String | 无 |
+| Url | 文件地址 | String | 无 |
