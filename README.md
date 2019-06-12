@@ -39,6 +39,8 @@ GSCloudPlugin.PrintPdf({
 | PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1  |
 | Pages | 指定打印页码。例：值为"2,5"，指定打印第2、3、4、5页；如果只需打印第2页，设置值为"2" | String | 无  |
 | UseFileCache | 适用于大文件。需要先调用[下载文件](#5-下载文件)或[异步下载文件](#6-异步下载文件)，**注意：并且需要设置Title一致** | bool | false  |
+| Cookies | cookie | Array([Cookie](#Cookie的字段说明)) | 无  |
+| HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无  |
 
 <a href="#打印图片"></a>
 ### 2. 打印图片
@@ -59,6 +61,8 @@ GSCloudPlugin.PrintImage({
 | Height | 纸张高度，单位毫米 | Int | 0  |
 | Url | 图片文件地址 | String | 无 |
 | PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1  |
+| Cookies | cookie | Array([Cookie](#Cookie的字段说明)) | 无  |
+| HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无  |
 
 <a href="#打印HTML"></a>
 ### 3. 打印HTML
@@ -79,6 +83,8 @@ GSCloudPlugin.PrintHtml({
 | Height | 纸张高度，单位毫米 | Int | 0  |
 | Url | HTML网页地址 | String | 无  |
 | PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1  |
+| Cookies | cookie | Array([Cookie](#Cookie的字段说明)) | 无  |
+| HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无  |
 
 <a href="#打印自定义绘图"></a>
 ### 4. 打印自定义绘图
@@ -109,6 +115,8 @@ GSCloudPlugin.PrintDraw({
 | Texts | 文本。**该字段也适用于PDF、图片、HTML打印** | Array([Text](#Text的字段说明)) | 无 |
 | Lines | 线条。**该字段也适用于PDF、图片、HTML打印** | Array([Line](#Line的字段说明)) | 无 |
 | Barcodes | 条码。**该字段也适用于PDF、图片、HTML打印** | Array([Barcode](#Barcode的字段说明)) | 无 |
+| Cookies | cookie | Array([Cookie](#Cookie的字段说明)) | 无  |
+| HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无  |
 
 <a href="#Text的字段说明"></a>
 #### Text的字段说明
@@ -170,6 +178,8 @@ GSCloudPlugin.DownloadFile({
 ----|-----|------|------
 | Title | 标题。将会使用此值做为文件名保存 | String | 无 |
 | Url | 文件地址 | String | 无 |
+| Cookies | cookie | Array([Cookie](#Cookie的字段说明)) | 无  |
+| HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无  |
 
 <a href="#异步下载文件"></a>
 ### 6. 异步下载文件
@@ -184,6 +194,8 @@ GSCloudPlugin.DownloadFileAsync({
 ----|-----|------|------
 | Title | 标题。将会使用此值做为文件名保存 | String | 无 |
 | Url | 文件地址 | String | 无 |
+| Cookies | cookie | Array([Cookie](#Cookie的字段说明)) | 无  |
+| HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无  |
 
 <a href="#成功回调事件"></a>
 ### 7. 成功回调事件
@@ -214,3 +226,19 @@ GSCloudPlugin.OnError = function(message,code,title,operationType){
 | operationType | 操作类型。值：Print、GetPrinters、DownloadFile、DownloadFileAsync | String | 无 |
 | message | 响应消息 | String | 无 |
 | code | 错误码 | String | 无 |
+
+### 其他
+<a href="#Cookie字段说明"></a>
+#### Cookie字段说明
+属性 | 说明 | 类型 | 默认值
+----|-----|------|------
+| Domain | 域名。必填，否则无效 | String | 无 |
+| Key | 键。必填，否则无效 | String | 无 |
+| Value | 值。必填，否则无效 | String | 无 |
+
+<a href="#HttpHeader字段说明"></a>
+#### HttpHeader字段说明
+属性 | 说明 | 类型 | 默认值
+----|-----|------|------
+| Key | 键。必填，否则无效；值：CacheControl、Authorization、Cookie、Referer | String | 无 |
+| Value | 值。必填，否则无效 | String | 无 |
