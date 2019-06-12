@@ -194,8 +194,8 @@ GSCloudPlugin.DownloadFileAsync({
 ----|-----|------|------
 | Title | 标题。将会使用此值做为文件名保存 | String | 无 |
 | Url | 文件地址 | String | 无 |
-| Cookies | cookie | Array([Cookie](#Cookie的字段说明)) | 无  |
-| HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无  |
+| Cookies | cookie | Array([Cookie](#cookie的字段说明)) | 无  |
+| HttpHeaders | http头信息 | Array([HttpHeader](#httpheader的字段说明)) | 无  |
 
 <a href="#成功回调事件"></a>
 ### 7. 成功回调事件
