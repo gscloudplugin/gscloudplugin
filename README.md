@@ -229,16 +229,16 @@ GSCloudPlugin.OnError = function(message,code,title,operationType){
 
 ### 其他
 
-<a href="#cookie的字段说明"></a>
-#### Cookie字段说明
+<a href="#Cookie的字段说明"></a>
+#### Cookie的字段说明
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
 | Domain | 域名。必填，否则无效 | String | 无 |
 | Key | 键。必填，否则无效 | String | 无 |
 | Value | 值。必填，否则无效 | String | 无 |
 
-<a href="#httpheader的字段说明"></a>
-#### HttpHeader字段说明
+<a href="#HttpHeader的字段说明"></a>
+#### HttpHeader的字段说明
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
 | Key | 键。必填，否则无效；值：CacheControl、Authorization、Cookie、Referer | String | 无 |
