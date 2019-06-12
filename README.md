@@ -228,7 +228,8 @@ GSCloudPlugin.OnError = function(message,code,title,operationType){
 | code | 错误码 | String | 无 |
 
 ### 其他
-<a href="#Cookie字段说明"></a>
+
+<a href="#Cookie的字段说明"></a>
 #### Cookie字段说明
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
@@ -236,7 +237,7 @@ GSCloudPlugin.OnError = function(message,code,title,operationType){
 | Key | 键。必填，否则无效 | String | 无 |
 | Value | 值。必填，否则无效 | String | 无 |
 
-<a href="#HttpHeader字段说明"></a>
+<a href="#HttpHeader的字段说明"></a>
 #### HttpHeader字段说明
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
