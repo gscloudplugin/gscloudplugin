@@ -12,11 +12,12 @@
 - [打印PDF](#1-打印pdf)
 - [打印图片](#2-打印图片)
 - [打印HTML](#3-打印HTML)
-- [打印自定义绘图](#4-打印自定义绘图)
-- [下载文件](#5-下载文件)
-- [异步下载文件](#6-异步下载文件)
-- [成功回调事件](#7-成功回调事件)
-- [错误回调事件](#8-错误回调事件)
+- [打印HTML](#4-打印Word文档)
+- [打印自定义绘图](#5-打印自定义绘图)
+- [下载文件](#6-下载文件)
+- [异步下载文件](#7-异步下载文件)
+- [成功回调事件](#8-成功回调事件)
+- [错误回调事件](#9-错误回调事件)
 
 <a href="#打印PDF"></a>
 ### 1. 打印PDF
@@ -70,10 +71,10 @@ GSCloudPlugin.PrintImage({
 ```
 GSCloudPlugin.PrintHtml({
 			Title:"HTML0001",
-			Width: 100,
-			Height: 150,
-			Url: url,
-			PrinterIndex: printerIndex
+			Width: 210,
+			Height: 297,
+			Url: "https://domain/demo.html",
+			PrinterIndex: -1
 		       });
 ```
 #### 字段说明
@@ -87,8 +88,31 @@ GSCloudPlugin.PrintHtml({
 | Cookies | cookie | Array([Cookie](#Cookie的字段说明)) | 无  |
 | HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无  |
 
+
+<a href="#打印Word文档"></a>
+### 4. 打印Word文档
+```
+GSCloudPlugin.PrintWord({
+			Title:"Word0001",
+			Width: 210,
+			Height: 297,
+			Url: "https://domain/demo.docx",
+			PrinterIndex: -1
+		       });
+```
+#### 字段说明
+属性 | 说明 | 类型 | 默认值
+----|-----|------|------
+| Title | 标题| String | 默认GUID格式字符串|
+| Width | 纸张宽度，单位毫米 | Int | 0 |
+| Height | 纸张高度，单位毫米 | Int | 0  |
+| Url | Word文档地址 | String | 无  |
+| PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1  |
+| Cookies | cookie | Array([Cookie](#Cookie的字段说明)) | 无  |
+| HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无  |
+
 <a href="#打印自定义绘图"></a>
-### 4. 打印自定义绘图
+### 5. 打印自定义绘图
 ```
 GSCloudPlugin.PrintDraw({
 			Title:"DRAW0001",
@@ -113,9 +137,9 @@ GSCloudPlugin.PrintDraw({
 | Width | 纸张宽度，单位毫米 | Int | 0 |
 | Height | 纸张高度，单位毫米 | Int | 0 |
 | PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1 |
-| Texts | 文本。**该字段也适用于PDF、图片、HTML打印** | Array([Text](#Text的字段说明)) | 无 |
-| Lines | 线条。**该字段也适用于PDF、图片、HTML打印** | Array([Line](#Line的字段说明)) | 无 |
-| Barcodes | 条码。**该字段也适用于PDF、图片、HTML打印** | Array([Barcode](#Barcode的字段说明)) | 无 |
+| Texts | 文本。**该字段也适用于PDF、图片、HTML、Word打印** | Array([Text](#Text的字段说明)) | 无 |
+| Lines | 线条。**该字段也适用于PDF、图片、HTML、Word打印** | Array([Line](#Line的字段说明)) | 无 |
+| Barcodes | 条码。**该字段也适用于PDF、图片、HTML、Word打印** | Array([Barcode](#Barcode的字段说明)) | 无 |
 | Cookies | cookie | Array([Cookie](#Cookie的字段说明)) | 无  |
 | HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无  |
 
@@ -167,7 +191,7 @@ GSCloudPlugin.PrintDraw({
 | Color | 颜色。RGBA用","隔开 | String | 0,0,0 |
 
 <a href="#下载文件"></a>
-### 5. 下载文件
+### 6. 下载文件
 ```
 GSCloudPlugin.DownloadFile({
 			Title:"File0001",
@@ -183,7 +207,7 @@ GSCloudPlugin.DownloadFile({
 | HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无  |
 
 <a href="#异步下载文件"></a>
-### 6. 异步下载文件
+### 7. 异步下载文件
 ```
 GSCloudPlugin.DownloadFileAsync({
 			Title:"File0002",
@@ -199,7 +223,7 @@ GSCloudPlugin.DownloadFileAsync({
 | HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无  |
 
 <a href="#成功回调事件"></a>
-### 7. 成功回调事件
+### 8. 成功回调事件
 ```
 GSCloudPlugin.OnSuccess = function(result){
 			console.log(result);
@@ -214,7 +238,7 @@ GSCloudPlugin.OnSuccess = function(result){
 | Message | 响应消息 | String | 无 |
 
 <a href="#错误回调事件"></a>
-### 8. 错误回调事件
+### 9. 错误回调事件
 ```
 GSCloudPlugin.OnError = function(message,code,title,operationType){
 			console.log(JSON.stringify({Message:message,Code:code,Title:title,OperationType:operationType}));
