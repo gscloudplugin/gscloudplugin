@@ -4,7 +4,7 @@
 - 使用静默方式打印。
 
 ## 安装
-- [下载地址](https://media.githubusercontent.com/media/gscloudplugin/gscloudplugin/master/setup/光速云插件3.2.0.zip)
+- [下载地址](https://media.githubusercontent.com/media/gscloudplugin/gscloudplugin/master/setup/光速云插件3.2.2.zip) 当前版本3.2.2
 - 解压zip文件后，内含安装包和demo文件
 
 ## 文档
@@ -34,8 +34,8 @@ GSCloudPlugin.PrintPdf({
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
 | Title | 标题| String | 默认GUID格式字符串|
-| Width | 纸张宽度，单位毫米 | Int | 0 |
-| Height | 纸张高度，单位毫米 | Int | 0 |
+| Width | 纸张宽度。单位毫米 | Int | 0 |
+| Height | 纸张高度。单位毫米；值为0时，打印高度自适应，应用于连续纸张 | Int | 0 |
 | Url | PDF文件地址 | String | 无 |
 | PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1 |
 | Pages | 指定打印页码。例：值为"2,5"，指定打印第2、3、4、5页；如果只需打印第2页，设置值为"2" | String | 无 |
@@ -43,6 +43,7 @@ GSCloudPlugin.PrintPdf({
 | RemoveMargin | 移除空白边距。适用于四周有较大的空白边距的不正规PDF文档；当然其他的类型打印也可以使用该参数 | bool | false |
 | Cookies | cookie | Array([Cookie](#Cookie的字段说明)) | 无 |
 | HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无 |
+| Copies | 打印文档份数 | Int | 1 |
 
 <a href="#打印图片"></a>
 ### 2. 打印图片
@@ -59,12 +60,13 @@ GSCloudPlugin.PrintImage({
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
 | Title | 标题| String | 默认GUID格式字符串|
-| Width | 纸张宽度，单位毫米 | Int | 0 |
-| Height | 纸张高度，单位毫米 | Int | 0  |
+| Width | 纸张宽度。单位毫米 | Int | 0 |
+| Height | 纸张高度。单位毫米；值为0时，打印高度自适应，应用于连续纸张 | Int | 0  |
 | Url | 图片文件地址 | String | 无 |
 | PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1  |
 | Cookies | cookie | Array([Cookie](#Cookie的字段说明)) | 无  |
 | HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无  |
+| Copies | 打印文档份数 | Int | 1 |
 
 <a href="#打印HTML"></a>
 ### 3. 打印HTML
@@ -81,12 +83,13 @@ GSCloudPlugin.PrintHtml({
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
 | Title | 标题| String | 默认GUID格式字符串|
-| Width | 纸张宽度，单位毫米 | Int | 0 |
-| Height | 纸张高度，单位毫米 | Int | 0  |
+| Width | 纸张宽度。单位毫米 | Int | 0 |
+| Height | 纸张高度。单位毫米；值为0时，打印高度自适应，应用于连续纸张 | Int | 0  |
 | Url | HTML网页地址 | String | 无  |
 | PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1  |
 | Cookies | cookie | Array([Cookie](#Cookie的字段说明)) | 无  |
 | HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无  |
+| Copies | 打印文档份数 | Int | 1 |
 
 
 <a href="#打印Word文档"></a>
@@ -104,12 +107,13 @@ GSCloudPlugin.PrintWord({
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
 | Title | 标题| String | 默认GUID格式字符串|
-| Width | 纸张宽度，单位毫米 | Int | 0 |
-| Height | 纸张高度，单位毫米 | Int | 0  |
+| Width | 纸张宽度。单位毫米 | Int | 0 |
+| Height | 纸张高度。单位毫米；值为0时，打印高度自适应，应用于连续纸张 | Int | 0  |
 | Url | Word文档地址 | String | 无  |
 | PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1  |
 | Cookies | cookie | Array([Cookie](#Cookie的字段说明)) | 无  |
 | HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无  |
+| Copies | 打印文档份数 | Int | 1 |
 
 <a href="#打印自定义绘图"></a>
 ### 5. 打印自定义绘图
@@ -134,14 +138,15 @@ GSCloudPlugin.PrintDraw({
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
 | Title | 标题| String | 默认GUID格式字符串 |
-| Width | 纸张宽度，单位毫米 | Int | 0 |
-| Height | 纸张高度，单位毫米 | Int | 0 |
+| Width | 纸张宽度。单位毫米 | Int | 0 |
+| Height | 纸张高度。单位毫米；值为0时，打印高度自适应，应用于连续纸张 | Int | 0 |
 | PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1 |
 | Texts | 文本。**该字段也适用于PDF、图片、HTML、Word打印** | Array([Text](#Text的字段说明)) | 无 |
 | Lines | 线条。**该字段也适用于PDF、图片、HTML、Word打印** | Array([Line](#Line的字段说明)) | 无 |
 | Barcodes | 条码。**该字段也适用于PDF、图片、HTML、Word打印** | Array([Barcode](#Barcode的字段说明)) | 无 |
 | Cookies | cookie | Array([Cookie](#Cookie的字段说明)) | 无  |
 | HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无  |
+| Copies | 打印文档份数 | Int | 1 |
 
 <a href="#Text的字段说明"></a>
 #### Text的字段说明
