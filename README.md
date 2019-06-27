@@ -4,7 +4,7 @@
 - 使用静默方式打印。
 
 ## 安装
-- [下载地址](https://media.githubusercontent.com/media/gscloudplugin/gscloudplugin/master/setup/光速云插件3.2.2.zip) 当前版本3.2.2
+- [下载地址](https://media.githubusercontent.com/media/gscloudplugin/gscloudplugin/master/setup/光速云插件3.2.4.zip) 当前版本3.2.4
 - 解压zip文件后，内含安装包和demo文件
 
 ## 文档
