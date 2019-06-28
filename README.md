@@ -20,6 +20,7 @@
 - [异步下载文件](#7-异步下载文件)
 - [成功回调事件](#8-成功回调事件)
 - [错误回调事件](#9-错误回调事件)
+- [客户端直接通过http方式调用光速云打印插件](#10-客户端直接通过http方式调用光速云打印插件)
 
 <a href="#打印PDF"></a>
 ### 1. 打印PDF
@@ -258,6 +259,25 @@ GSCloudPlugin.OnError = function(message,code,title,operationType){
 | operationType | 操作类型。值：Print、GetPrinters、DownloadFile、DownloadFileAsync | String | 无 |
 | message | 响应消息 | String | 无 |
 | code | 错误码 | String | 无 |
+
+
+<a href="#客户端直接通过http方式调用光速云打印插件"></a>
+### 10. 客户端直接通过http方式调用光速云打印插件
+URL：http://host:8365/print  其中host为客户端的内网ip地址
+Method：POST
+Content-Type：application/json
+
+#### 请求字段说明（其他字段参照PDF/图片/HTML/Word的打印字段说明）
+属性 | 说明 | 类型 | 默认值
+----|-----|------|------
+| MediumType | 文档类型。值：Pdf、Image、Html、Word、Draw | String | 无 |
+| OperationType | 操作类型。值：Print、GetPrinters、DownloadFile、DownloadFileAsync | String | 无 |
+| AppKey | 注册码 | String | 无 |
+#### 响应字段说明
+属性 | 说明 | 类型
+----|-----|------|------
+| Status | 状态。值：0失败、1成功 | String |
+| Message | 消息。| String |
 
 ### 其他
 
