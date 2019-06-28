@@ -2,9 +2,10 @@
 ## 特点
 - 浏览器打印PDF/HTML/图片/Word文档/自定义绘图。
 - 使用静默方式打印。
+- 支持浏览器谷歌、火狐、IE7+
 
 ## 安装
-- [下载地址](https://media.githubusercontent.com/media/gscloudplugin/gscloudplugin/master/setup/光速云插件3.2.4.zip) 当前版本3.2.4
+- [下载地址](https://media.githubusercontent.com/media/gscloudplugin/gscloudplugin/master/setup/光速云插件3.2.5.zip) 当前版本3.2.5
 - 解压zip文件后，内含安装包和demo文件
 
 ## 文档
