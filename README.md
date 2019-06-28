@@ -263,9 +263,9 @@ GSCloudPlugin.OnError = function(message,code,title,operationType){
 
 <a href="#客户端直接通过http方式调用光速云打印插件"></a>
 ### 10. 客户端直接通过http方式调用光速云打印插件
-URL：http://host:8365/print  其中host为客户端的内网ip地址
-Method：POST
-Content-Type：application/json
+URL：http://host:8365/print  其中host为客户端的内网ip地址  
+Method：POST  
+Content-Type：application/json  
 
 #### 请求字段说明（其他字段参照PDF/图片/HTML/Word的打印字段说明）
 属性 | 说明 | 类型 | 默认值
@@ -275,7 +275,7 @@ Content-Type：application/json
 | AppKey | 注册码 | String | 无 |
 #### 响应字段说明
 属性 | 说明 | 类型
-----|-----|------|------
+----|-----|------
 | Status | 状态。值：0失败、1成功 | String |
 | Message | 消息。| String |
 
