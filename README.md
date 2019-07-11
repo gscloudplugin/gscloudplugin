@@ -265,8 +265,12 @@ GSCloudPlugin.OnError = function(message,code,title,operationType){
 
 <a href="#获取打印机信息"></a>
 ### 10. 获取打印机信息 
-
-#### 请求字段说明（其他字段参照PDF/图片/HTML/Word的打印字段说明）
+```
+GSCloudPlugin.GetPrinterInfo({
+		     PrinterIndex: -1
+		});
+```
+#### 请求字段说明
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
 | PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1 |
