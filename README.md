@@ -6,11 +6,12 @@
 - 支持浏览器谷歌、火狐、IE7+
 
 ## 安装
-- [下载地址](https://media.githubusercontent.com/media/gscloudplugin/gscloudplugin/master/setup/光速云插件3.2.5.zip) 当前版本3.2.5
+- [下载地址](https://media.githubusercontent.com/media/gscloudplugin/gscloudplugin/master/setup/光速云插件3.3.0.zip) 当前版本3.3.0
 - 解压zip文件后，内含安装包和demo文件
 
 ## 文档
 - 关于尺寸相关单位统一为：毫米
+- 打印设计功能正在开发中，敬请期待
 - [打印PDF](#1-打印pdf)
 - [打印图片](#2-打印图片)
 - [打印HTML](#3-打印HTML)
@@ -20,8 +21,9 @@
 - [异步下载文件](#7-异步下载文件)
 - [成功回调事件](#8-成功回调事件)
 - [错误回调事件](#9-错误回调事件)
-- [客户端直接通过http方式调用光速云打印插件](#10-客户端直接通过http方式调用光速云打印插件)
-- 打印设计功能正在开发中，敬请期待
+- [获取打印机信息](#10-获取打印机信息)
+- [客户端直接通过http方式调用光速云打印插件](#11-客户端直接通过http方式调用光速云打印插件)
+- [购买无水印版地址](https://item.taobao.com/item.htm?id=558385485374)
 
 <a href="#打印PDF"></a>
 ### 1. 打印PDF
@@ -261,9 +263,30 @@ GSCloudPlugin.OnError = function(message,code,title,operationType){
 | message | 响应消息 | String | 无 |
 | code | 错误码 | String | 无 |
 
+<a href="#获取打印机信息"></a>
+### 10. 获取打印机信息 
+
+#### 请求字段说明（其他字段参照PDF/图片/HTML/Word的打印字段说明）
+属性 | 说明 | 类型 | 默认值
+----|-----|------|------
+| PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1 |
+#### 响应字段说明
+属性 | 说明 | 类型
+----|-----|------
+| Status | 状态。值：0失败、1成功 | String |
+| Message | 消息。| String |
+| Data | 数据| Object |
+
+#### 响应字段Data说明
+属性 | 说明 | 类型
+----|-----|------
+| CanDuplex | 是否支持双面打印 | bool |
+| IsPlotter | 是否是绘图仪 | bool |
+| IsDefaultPrinter | 是否默认打印机| bool |
+| PrinterName | 打印机名称| String |
 
 <a href="#客户端直接通过http方式调用光速云打印插件"></a>
-### 10. 客户端直接通过http方式调用光速云打印插件
+### 11. 客户端直接通过http方式调用光速云打印插件
 URL：http://host:8365/print  其中host为客户端的内网ip地址  
 Method：POST  
 Content-Type：application/json  
