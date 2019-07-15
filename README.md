@@ -296,36 +296,6 @@ GSCloudPlugin.DownloadFileAsync({
 | Message | 响应消息 | String | 无 |
 | Code | 错误码 | int | 无 |
 
-<a href="#获取打印队列"></a>
-### 11. 获取打印队列 
-```
-GSCloudPlugin.GetPrintQueue({
-			OnSuccess:function(result){
-				console.log(result);
-			},
-			OnError:function(result){
-				console.log(result);
-			}
-		     });
-```
-#### 响应字段说明
-属性 | 说明 | 类型
-----|-----|------
-| Status | 状态。值：0失败、1成功 | String |
-| Message | 消息。| String |
-| Data | 数据| Object |
-
-#### 响应字段Data说明
-属性 | 说明 | 类型
-----|-----|------
-| Name | 任务名；与打印时设置的Title值一致 | String |
-| PrinterIndex | 打印机索引号 | Int |
-| PrinterName | 打印机名称| String |
-| JobStatus | 任务状态；值：None(无指定状态)、Paused(已暂停)、Error(错误)、Deleting(正在删除)、Spooling(正在进行后台打印)、Printing(正在打印)、Offline(脱机状态)、PaperOut(无法提供所需纸张大小)、Printed(已打印)、Deleted(通常情况下，打印完成后，系统会从队列中删除该打印作业)、Blocked(队列中该打印作业之前的打印作业可能出现了错误情况，因此该打印作业已被阻止)、UserIntervention(打印机要求通过用户操作来修复错误情况)、Restarted(打印作业被阻止，但已重新启动)、Completed(打印作业已完成，包括所有打印后处理)、Retained(打印作业打印完后仍保留在打印队列中)| String |
-| JobIdentifier | 打印任务标识号| Int |
-| TimeJobSubmitted | 提交打印任务时间| String |
-
-
 <a href="#获取打印机信息"></a>
 ### 10. 获取打印机信息 
 ```
@@ -357,6 +327,35 @@ GSCloudPlugin.GetPrinterInfo({
 | IsPlotter | 是否是绘图仪 | bool |
 | IsDefaultPrinter | 是否默认打印机| bool |
 | PrinterName | 打印机名称| String |
+
+<a href="#获取打印队列"></a>
+### 11. 获取打印队列 
+```
+GSCloudPlugin.GetPrintQueue({
+			OnSuccess:function(result){
+				console.log(result);
+			},
+			OnError:function(result){
+				console.log(result);
+			}
+		     });
+```
+#### 响应字段说明
+属性 | 说明 | 类型
+----|-----|------
+| Status | 状态。值：0失败、1成功 | String |
+| Message | 消息。| String |
+| Data | 数据| Array(Object) |
+
+#### 响应字段Data说明
+属性 | 说明 | 类型
+----|-----|------
+| Name | 任务名；与打印时设置的Title值一致 | String |
+| PrinterIndex | 打印机索引号 | Int |
+| PrinterName | 打印机名称| String |
+| JobStatus | 任务状态；值：None(无指定状态)、Paused(已暂停)、Error(错误)、Deleting(正在删除)、Spooling(正在进行后台打印)、Printing(正在打印)、Offline(脱机状态)、PaperOut(无法提供所需纸张大小)、Printed(已打印)、Deleted(通常情况下，打印完成后，系统会从队列中删除该打印作业)、Blocked(队列中该打印作业之前的打印作业可能出现了错误情况，因此该打印作业已被阻止)、UserIntervention(打印机要求通过用户操作来修复错误情况)、Restarted(打印作业被阻止，但已重新启动)、Completed(打印作业已完成，包括所有打印后处理)、Retained(打印作业打印完后仍保留在打印队列中)| String |
+| JobIdentifier | 打印任务标识号| Int |
+| TimeJobSubmitted | 提交打印任务时间| String |
 
 <a href="#客户端直接通过http方式调用光速云打印插件"></a>
 ### 12. 客户端直接通过http方式调用光速云打印插件
