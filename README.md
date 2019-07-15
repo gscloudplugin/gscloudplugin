@@ -3,7 +3,8 @@
 - 浏览器打印PDF/HTML/图片/Word文档/自定义绘图。
 - 支持超大PDF文件打印，能够快速响应打印。
 - 使用静默方式打印。
-- 支持浏览器谷歌、火狐、IE7+
+- 读取串口数据，可以应用于电子秤重量读取。
+- 支持浏览器谷歌、火狐、IE7+。
 
 ## 安装
 - [下载地址](https://media.githubusercontent.com/media/gscloudplugin/gscloudplugin/master/setup/光速云插件3.4.0.zip) 当前版本3.4.0
@@ -23,7 +24,9 @@
 - [错误回调事件](#9-错误回调事件)
 - [获取打印机信息](#10-获取打印机信息)
 - [获取打印队列](#11-获取打印队列)
-- [客户端直接通过http方式调用光速云打印插件](#12-客户端直接通过http方式调用光速云打印插件)
+- [读取串口数据](#12-读取串口数据)
+- [关闭串口](#13-关闭串口)
+- [客户端直接通过http方式调用光速云打印插件](#14-客户端直接通过http方式调用光速云打印插件)
 - [购买无水印版地址](https://item.taobao.com/item.htm?id=558385485374)
 
 <a href="#打印PDF"></a>
@@ -360,8 +363,61 @@ GSCloudPlugin.GetPrintQueue({
 | JobIdentifier | 打印任务标识号| Int |
 | TimeJobSubmitted | 提交打印任务时间| String |
 
+<a href="#读取串口数据"></a>
+### 12. 读取串口数据 
+```
+GSCloudPlugin.ReadSerialPortData({
+			PortName:"COM2",
+			KeepAlive:true,
+			OnSuccess:function(result){
+				console.log(result);
+			},
+			OnError:function(result){
+				console.log(result);
+			}
+		});
+```
+#### 请求字段说明
+属性 | 说明 | 类型 | 默认值
+----|-----|------|------
+| PortName | 端口名 | String | COM1 |
+| BaudRate | 波特率 | Int | 9600 |
+| Parity | 校验位；值：None(不发生奇偶校验检查)、Odd(奇数)、Even(偶数)、Mark(将奇偶校验位保留为 1)、Space(将奇偶校验位保留为 0) | String | None |
+| DataBits | 数据位 | Int | 8 |
+| StopBits | 停止位；值：None(不使用停止位)、One(使用一个停止位)、Two(使用两个停止位)、OnePointFive(使用 1.5 个停止位) | String | One |
+| KeepAlive | 保持连接；如果值为true，在不需要使用读取串口数据时，建议调用一下关闭串口方法，否则串口会一直被占用，其他程序将无法读取串口数据 | bool | true |
+#### 响应字段说明
+属性 | 说明 | 类型
+----|-----|------
+| Status | 状态。值：0失败、1成功 | String |
+| Message | 消息。| String |
+| Data | 数据| String |
+
+<a href="#关闭串口"></a>
+### 13. 关闭串口 
+```
+GSCloudPlugin.CloseSerialPort({
+			PortName:"COM2",
+			OnSuccess:function(result){
+				console.log(result);
+			},
+			OnError:function(result){
+				console.log(result);
+			}
+		});
+```
+#### 请求字段说明
+属性 | 说明 | 类型 | 默认值
+----|-----|------|------
+| PortName | 端口名 | String | COM1 |
+#### 响应字段说明
+属性 | 说明 | 类型
+----|-----|------
+| Status | 状态。值：0失败、1成功 | String |
+| Message | 消息。| String |
+
 <a href="#客户端直接通过http方式调用光速云打印插件"></a>
-### 12. 客户端直接通过http方式调用光速云打印插件
+### 14. 客户端直接通过http方式调用光速云打印插件
 URL：http://host:8365/print  其中host为客户端的内网ip地址  
 Method：POST  
 Content-Type：application/json  
