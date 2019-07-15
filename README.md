@@ -55,7 +55,7 @@ GSCloudPlugin.PrintPdf({
 | Url | PDF文件地址 | String | 无 |
 | PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1 |
 | Pages | 指定打印页码。例：值为"2,5"，指定打印第2、3、4、5页；如果只需打印第2页，设置值为"2" | String | 无 |
-| UseFileCache | 适用于大文件。需要先调用[下载文件](#5-下载文件)或[异步下载文件](#6-异步下载文件)，**注意：并且需要设置Title一致** | bool | false  |
+| UseFileCache | 适用于大文件。需要先调用[下载文件](#6-下载文件)或[异步下载文件](#7-异步下载文件)，**注意：并且需要设置Title一致** | bool | false  |
 | RemoveMargin | 移除空白边距。适用于四周有较大的空白边距的不正规PDF文档；当然其他的类型打印也可以使用该参数 | bool | false |
 | Cookies | cookie | Array([Cookie](#Cookie的字段说明)) | 无 |
 | HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无 |
