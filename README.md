@@ -33,8 +33,14 @@ GSCloudPlugin.PrintPdf({
 			Width: 100,
 			Height: 150,
 			Url: "https://domain/demo.pdf",
-			PrinterIndex: -1
-		       });
+			PrinterIndex: -1,
+			OnSuccess:function(result){
+				console.log(result);
+			},
+			OnError:function(result){
+				console.log(result);
+			}
+		     });
 ```
 #### 字段说明
 属性 | 说明 | 类型 | 默认值
@@ -59,8 +65,14 @@ GSCloudPlugin.PrintImage({
 			Width: 100,
 			Height: 150,
 			Url: "https://domain/demo.png",
-			PrinterIndex: -1
-		       });
+			PrinterIndex: -1,
+			OnSuccess:function(result){
+				console.log(result);
+			},
+			OnError:function(result){
+				console.log(result);
+			}
+		     });
 ```
 #### 字段说明
 属性 | 说明 | 类型 | 默认值
@@ -82,8 +94,14 @@ GSCloudPlugin.PrintHtml({
 			Width: 210,
 			Height: 297,
 			Url: "https://domain/demo.html",
-			PrinterIndex: -1
-		       });
+			PrinterIndex: -1,
+			OnSuccess:function(result){
+				console.log(result);
+			},
+			OnError:function(result){
+				console.log(result);
+			}
+		     });
 ```
 #### 字段说明
 属性 | 说明 | 类型 | 默认值
@@ -106,8 +124,14 @@ GSCloudPlugin.PrintWord({
 			Width: 210,
 			Height: 297,
 			Url: "https://domain/demo.docx",
-			PrinterIndex: -1
-		       });
+			PrinterIndex: -1,
+			OnSuccess:function(result){
+				console.log(result);
+			},
+			OnError:function(result){
+				console.log(result);
+			}
+		     });
 ```
 #### 字段说明
 属性 | 说明 | 类型 | 默认值
@@ -137,8 +161,14 @@ GSCloudPlugin.PrintDraw({
 				{Width:58,Height:9,Format:"CODE_128",X:1,Y:1,Text:{Content:"001AEDWSDFR",FontSize:2.6,Position:"Top"}},
 				{Width:9,Height:9,Format:"QR_CODE",X:49,Y:10.5,Text:{Content:"001AEDWSDFR"}}
 			],
-			PrinterIndex: -1
-		});
+			PrinterIndex: -1,
+			OnSuccess:function(result){
+				console.log(result);
+			},
+			OnError:function(result){
+				console.log(result);
+			}
+		     });
 ```
 #### 字段说明
 属性 | 说明 | 类型 | 默认值
@@ -206,8 +236,14 @@ GSCloudPlugin.PrintDraw({
 ```
 GSCloudPlugin.DownloadFile({
 			Title:"File0001",
-			Url: url
-		});
+			Url: url,
+			OnSuccess:function(result){
+				console.log(result);
+			},
+			OnError:function(result){
+				console.log(result);
+			}
+		     });
 ```
 #### 字段说明
 属性 | 说明 | 类型 | 默认值
@@ -222,8 +258,14 @@ GSCloudPlugin.DownloadFile({
 ```
 GSCloudPlugin.DownloadFileAsync({
 			Title:"File0002",
-			Url: url
-		});
+			Url: url,
+			OnSuccess:function(result){
+				console.log(result);
+			},
+			OnError:function(result){
+				console.log(result);
+			}
+		     });
 ```
 #### 字段说明
 属性 | 说明 | 类型 | 默认值
