@@ -22,7 +22,8 @@
 - [成功回调事件](#8-成功回调事件)
 - [错误回调事件](#9-错误回调事件)
 - [获取打印机信息](#10-获取打印机信息)
-- [客户端直接通过http方式调用光速云打印插件](#11-客户端直接通过http方式调用光速云打印插件)
+- [获取打印队列](#11-获取打印队列)
+- [客户端直接通过http方式调用光速云打印插件](#12-客户端直接通过http方式调用光速云打印插件)
 - [购买无水印版地址](https://item.taobao.com/item.htm?id=558385485374)
 
 <a href="#打印PDF"></a>
@@ -277,11 +278,6 @@ GSCloudPlugin.DownloadFileAsync({
 
 <a href="#成功回调事件"></a>
 ### 8. 成功回调事件
-```
-GSCloudPlugin.OnSuccess = function(result){
-			console.log(result);
-		}
-```
 #### 字段说明
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
@@ -292,25 +288,56 @@ GSCloudPlugin.OnSuccess = function(result){
 
 <a href="#错误回调事件"></a>
 ### 9. 错误回调事件
-```
-GSCloudPlugin.OnError = function(message,code,title,operationType){
-			console.log(JSON.stringify({Message:message,Code:code,Title:title,OperationType:operationType}));
-		}
-```
 #### 字段说明
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
-| title | 标题。与调用函数时设置的Title值一致 | String | 无 |
-| operationType | 操作类型。值：Print、GetPrinters、DownloadFile、DownloadFileAsync | String | 无 |
-| message | 响应消息 | String | 无 |
-| code | 错误码 | String | 无 |
+| Title | 标题。与调用函数时设置的Title值一致 | String | 无 |
+| OperationType | 操作类型。值：Print、GetPrinters、DownloadFile、DownloadFileAsync | String | 无 |
+| Message | 响应消息 | String | 无 |
+| Code | 错误码 | int | 无 |
+
+<a href="#获取打印队列"></a>
+### 11. 获取打印队列 
+```
+GSCloudPlugin.GetPrintQueue({
+			OnSuccess:function(result){
+				console.log(result);
+			},
+			OnError:function(result){
+				console.log(result);
+			}
+		     });
+```
+#### 响应字段说明
+属性 | 说明 | 类型
+----|-----|------
+| Status | 状态。值：0失败、1成功 | String |
+| Message | 消息。| String |
+| Data | 数据| Object |
+
+#### 响应字段Data说明
+属性 | 说明 | 类型
+----|-----|------
+| Name | 任务名；与打印时设置的Title值一致 | String |
+| PrinterIndex | 打印机索引号 | Int |
+| PrinterName | 打印机名称| String |
+| JobStatus | 任务状态；值：None(无指定状态)、Paused(已暂停)、Error(错误)、Deleting(正在删除)、Spooling(正在进行后台打印)、Printing(正在打印)、Offline(脱机状态)、PaperOut(无法提供所需纸张大小)、Printed(已打印)、Deleted(通常情况下，打印完成后，系统会从队列中删除该打印作业)、Blocked(队列中该打印作业之前的打印作业可能出现了错误情况，因此该打印作业已被阻止)、UserIntervention(打印机要求通过用户操作来修复错误情况)、Restarted(打印作业被阻止，但已重新启动)、Completed(打印作业已完成，包括所有打印后处理)、Retained(打印作业打印完后仍保留在打印队列中)| String |
+| JobIdentifier | 打印任务标识号| Int |
+| TimeJobSubmitted | 提交打印任务时间| String |
+
 
 <a href="#获取打印机信息"></a>
 ### 10. 获取打印机信息 
 ```
 GSCloudPlugin.GetPrinterInfo({
-		     PrinterIndex: -1
-		});
+		        PrinterIndex: -1,
+			OnSuccess:function(result){
+				console.log(result);
+			},
+			OnError:function(result){
+				console.log(result);
+			}
+		     });
 ```
 #### 请求字段说明
 属性 | 说明 | 类型 | 默认值
@@ -332,7 +359,7 @@ GSCloudPlugin.GetPrinterInfo({
 | PrinterName | 打印机名称| String |
 
 <a href="#客户端直接通过http方式调用光速云打印插件"></a>
-### 11. 客户端直接通过http方式调用光速云打印插件
+### 12. 客户端直接通过http方式调用光速云打印插件
 URL：http://host:8365/print  其中host为客户端的内网ip地址  
 Method：POST  
 Content-Type：application/json  
