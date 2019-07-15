@@ -6,7 +6,7 @@
 - 支持浏览器谷歌、火狐、IE7+
 
 ## 安装
-- [下载地址](https://media.githubusercontent.com/media/gscloudplugin/gscloudplugin/master/setup/光速云插件3.3.0.zip) 当前版本3.3.0
+- [下载地址](https://media.githubusercontent.com/media/gscloudplugin/gscloudplugin/master/setup/光速云插件3.4.0.zip) 当前版本3.4.0
 - 解压zip文件后，内含安装包和demo文件
 
 ## 文档
