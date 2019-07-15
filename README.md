@@ -385,7 +385,7 @@ GSCloudPlugin.ReadSerialPortData({
 | Parity | 校验位；值：None(不发生奇偶校验检查)、Odd(奇数)、Even(偶数)、Mark(将奇偶校验位保留为 1)、Space(将奇偶校验位保留为 0) | String | None |
 | DataBits | 数据位 | Int | 8 |
 | StopBits | 停止位；值：None(不使用停止位)、One(使用一个停止位)、Two(使用两个停止位)、OnePointFive(使用 1.5 个停止位) | String | One |
-| KeepAlive | 保持连接；如果值为true，在不需要使用读取串口数据时，建议调用一下关闭串口方法，否则串口会一直被占用，其他程序将无法读取串口数据 | bool | true |
+| KeepAlive | 保持连接；如果值为true，在不需要使用读取串口数据时，建议调用一下关闭串口方法，否则串口会一直被占用，其他程序将无法使用该串口 | bool | true |
 #### 响应字段说明
 属性 | 说明 | 类型
 ----|-----|------
