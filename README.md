@@ -7,7 +7,7 @@
 - 支持浏览器谷歌、火狐、IE7+。
 
 ## 安装
-- [下载地址](https://media.githubusercontent.com/media/gscloudplugin/gscloudplugin/master/setup/光速云插件3.4.0.zip) 当前版本3.4.0
+- [下载地址](https://media.githubusercontent.com/media/gscloudplugin/gscloudplugin/master/setup/光速云插件3.4.1.zip) 当前版本3.4.1
 - 解压zip文件后，内含安装包和demo文件
 
 ## 文档
@@ -26,7 +26,10 @@
 - [获取打印队列](#11-获取打印队列)
 - [读取串口数据](#12-读取串口数据)
 - [关闭串口](#13-关闭串口)
-- [客户端直接通过http方式调用光速云打印插件](#14-客户端直接通过http方式调用光速云打印插件)
+- [写入数据到串口](#14-写入数据到串口)
+- [写入数据行到串口](#15-写入数据行到串口)
+- [写入字节数据到串口](#16-写入字节数据到串口)
+- [客户端直接通过http方式调用光速云打印插件](#17-客户端直接通过http方式调用光速云打印插件)
 - [购买无水印版地址](https://item.taobao.com/item.htm?id=558385485374)
 
 <a href="#打印PDF"></a>
@@ -410,14 +413,85 @@ GSCloudPlugin.CloseSerialPort({
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
 | PortName | 端口名 | String | COM1 |
-#### 响应字段说明
-属性 | 说明 | 类型
-----|-----|------
-| Status | 状态。值：0失败、1成功 | String |
-| Message | 消息。| String |
+
+
+<a href="#写入数据到串口"></a>
+### 14. 写入数据到串口 
+```
+GSCloudPlugin.WriteSerialPortData({
+			PortName:"COM1",
+			Text:"123456",
+			OnSuccess:function(result){
+				console.log(result);
+			},
+			OnError:function(result){
+				console.log(result);
+			}
+		});
+```
+#### 请求字段说明
+属性 | 说明 | 类型 | 默认值
+----|-----|------|------
+| Text | 写入的文本数据 | String | 无 |
+| PortName | 端口名 | String | COM1 |
+| BaudRate | 波特率 | Int | 9600 |
+| Parity | 校验位；值：None(不发生奇偶校验检查)、Odd(奇数)、Even(偶数)、Mark(将奇偶校验位保留为 1)、Space(将奇偶校验位保留为 0) | String | None |
+| DataBits | 数据位 | Int | 8 |
+| StopBits | 停止位；值：None(不使用停止位)、One(使用一个停止位)、Two(使用两个停止位)、OnePointFive(使用 1.5 个停止位) | String | One |
+
+
+<a href="#写入数据行到串口"></a>
+### 15. 写入数据行到串口 
+```
+GSCloudPlugin.WriteSerialPortData({
+			PortName:"COM1",
+			Text:"123456",
+			OnSuccess:function(result){
+				console.log(result);
+			},
+			OnError:function(result){
+				console.log(result);
+			}
+		});
+```
+#### 请求字段说明
+属性 | 说明 | 类型 | 默认值
+----|-----|------|------
+| Text | 写入的文本数据 | String | 无 |
+| PortName | 端口名 | String | COM1 |
+| BaudRate | 波特率 | Int | 9600 |
+| Parity | 校验位；值：None(不发生奇偶校验检查)、Odd(奇数)、Even(偶数)、Mark(将奇偶校验位保留为 1)、Space(将奇偶校验位保留为 0) | String | None |
+| DataBits | 数据位 | Int | 8 |
+| StopBits | 停止位；值：None(不使用停止位)、One(使用一个停止位)、Two(使用两个停止位)、OnePointFive(使用 1.5 个停止位) | String | One |
+
+
+<a href="#写入字节数据到串口"></a>
+### 16. 写入字节数据到串口 
+```
+GSCloudPlugin.WriteSerialPortData({
+			PortName:"COM1",
+			Bytes:"10,11,12",
+			OnSuccess:function(result){
+				console.log(result);
+			},
+			OnError:function(result){
+				console.log(result);
+			}
+		});
+```
+#### 请求字段说明
+属性 | 说明 | 类型 | 默认值
+----|-----|------|------
+| Bytes | 写入的字节数据。多个字节使用英文逗号隔开 | String | 无 |
+| PortName | 端口名 | String | COM1 |
+| BaudRate | 波特率 | Int | 9600 |
+| Parity | 校验位；值：None(不发生奇偶校验检查)、Odd(奇数)、Even(偶数)、Mark(将奇偶校验位保留为 1)、Space(将奇偶校验位保留为 0) | String | None |
+| DataBits | 数据位 | Int | 8 |
+| StopBits | 停止位；值：None(不使用停止位)、One(使用一个停止位)、Two(使用两个停止位)、OnePointFive(使用 1.5 个停止位) | String | One |
+
 
 <a href="#客户端直接通过http方式调用光速云打印插件"></a>
-### 14. 客户端直接通过http方式调用光速云打印插件
+### 17. 客户端直接通过http方式调用光速云打印插件
 URL：http://host:8365/print  其中host为客户端的内网ip地址  
 Method：POST  
 Content-Type：application/json  
