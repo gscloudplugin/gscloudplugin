@@ -7,7 +7,7 @@
 - 支持浏览器谷歌、火狐、IE7+。
 
 ## 安装
-- [下载地址](https://media.githubusercontent.com/media/gscloudplugin/gscloudplugin/master/setup/光速云插件3.4.1.zip) 当前版本3.4.1
+- [下载地址](https://media.githubusercontent.com/media/gscloudplugin/gscloudplugin/master/setup/光速云插件3.4.6.zip) 当前版本3.4.6
 - 解压zip文件后，内含安装包和demo文件
 
 ## 文档
@@ -40,7 +40,7 @@ GSCloudPlugin.PrintPdf({
 			Width: 100,
 			Height: 150,
 			Url: "https://domain/demo.pdf",
-			PrinterIndex: -1,
+			PrinterName: "",
 			OnSuccess:function(result){
 				console.log(result);
 			},
@@ -56,7 +56,7 @@ GSCloudPlugin.PrintPdf({
 | Width | 纸张宽度。单位毫米 | Int | 0 |
 | Height | 纸张高度。单位毫米；值为0时，打印高度自适应，应用于连续纸张 | Int | 0 |
 | Url | PDF文件地址 | String | 无 |
-| PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1 |
+| PrinterName | 打印机名称。不传值则使用默认打印机 | String | 无 |
 | Pages | 指定打印页码。例：值为"2,5"，指定打印第2、3、4、5页；如果只需打印第2页，设置值为"2" | String | 无 |
 | UseFileCache | 适用于大文件。需要先调用[下载文件](#6-下载文件)或[异步下载文件](#7-异步下载文件)，**注意：并且需要设置Title一致** | bool | false  |
 | RemoveMargin | 移除空白边距。适用于四周有较大的空白边距的不正规PDF文档；当然其他的类型打印也可以使用该参数 | bool | false |
@@ -75,7 +75,7 @@ GSCloudPlugin.PrintImage({
 			Width: 100,
 			Height: 150,
 			Url: "https://domain/demo.png",
-			PrinterIndex: -1,
+			PrinterName: "",
 			OnSuccess:function(result){
 				console.log(result);
 			},
@@ -91,7 +91,7 @@ GSCloudPlugin.PrintImage({
 | Width | 纸张宽度。单位毫米 | Int | 0 |
 | Height | 纸张高度。单位毫米；值为0时，打印高度自适应，应用于连续纸张 | Int | 0  |
 | Url | 图片文件地址 | String | 无 |
-| PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1  |
+| PrinterName | 打印机名称。不传值则使用默认打印机 | String | 无 |
 | Cookies | cookie | Array([Cookie](#Cookie的字段说明)) | 无  |
 | HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无  |
 | Copies | 打印文档份数 | Int | 1 |
@@ -104,7 +104,7 @@ GSCloudPlugin.PrintHtml({
 			Width: 210,
 			Height: 297,
 			Url: "https://domain/demo.html",
-			PrinterIndex: -1,
+			PrinterName: "",
 			OnSuccess:function(result){
 				console.log(result);
 			},
@@ -120,7 +120,7 @@ GSCloudPlugin.PrintHtml({
 | Width | 纸张宽度。单位毫米 | Int | 0 |
 | Height | 纸张高度。单位毫米；值为0时，打印高度自适应，应用于连续纸张 | Int | 0  |
 | Url | HTML网页地址 | String | 无  |
-| PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1  |
+| PrinterName | 打印机名称。不传值则使用默认打印机 | String | 无 |
 | Cookies | cookie | Array([Cookie](#Cookie的字段说明)) | 无  |
 | HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无  |
 | Copies | 打印文档份数 | Int | 1 |
@@ -134,7 +134,7 @@ GSCloudPlugin.PrintWord({
 			Width: 210,
 			Height: 297,
 			Url: "https://domain/demo.docx",
-			PrinterIndex: -1,
+			PrinterName: "",
 			OnSuccess:function(result){
 				console.log(result);
 			},
@@ -150,7 +150,7 @@ GSCloudPlugin.PrintWord({
 | Width | 纸张宽度。单位毫米 | Int | 0 |
 | Height | 纸张高度。单位毫米；值为0时，打印高度自适应，应用于连续纸张 | Int | 0  |
 | Url | Word文档地址 | String | 无  |
-| PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1  |
+| PrinterName | 打印机名称。不传值则使用默认打印机 | String | 无 |
 | Cookies | cookie | Array([Cookie](#Cookie的字段说明)) | 无  |
 | HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无  |
 | Copies | 打印文档份数 | Int | 1 |
@@ -171,7 +171,7 @@ GSCloudPlugin.PrintDraw({
 				{Width:58,Height:9,Format:"CODE_128",X:1,Y:1,Text:{Content:"001AEDWSDFR",FontSize:2.6,Position:"Top"}},
 				{Width:9,Height:9,Format:"QR_CODE",X:49,Y:10.5,Text:{Content:"001AEDWSDFR"}}
 			],
-			PrinterIndex: -1,
+			PrinterName: "",
 			OnSuccess:function(result){
 				console.log(result);
 			},
@@ -186,7 +186,7 @@ GSCloudPlugin.PrintDraw({
 | Title | 标题| String | 默认GUID格式字符串 |
 | Width | 纸张宽度。单位毫米 | Int | 0 |
 | Height | 纸张高度。单位毫米；值为0时，打印高度自适应，应用于连续纸张 | Int | 0 |
-| PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1 |
+| PrinterName | 打印机名称。不传值则使用默认打印机 | String | 无 |
 | Texts | 文本。**该字段也适用于PDF、图片、HTML、Word打印** | Array([Text](#Text的字段说明)) | 无 |
 | Lines | 线条。**该字段也适用于PDF、图片、HTML、Word打印** | Array([Line](#Line的字段说明)) | 无 |
 | Barcodes | 条码。**该字段也适用于PDF、图片、HTML、Word打印** | Array([Barcode](#Barcode的字段说明)) | 无 |
@@ -309,7 +309,7 @@ GSCloudPlugin.DownloadFileAsync({
 ### 10. 获取打印机信息 
 ```
 GSCloudPlugin.GetPrinterInfo({
-		        PrinterIndex: -1,
+		        PrinterName: "",
 			OnSuccess:function(result){
 				console.log(result);
 			},
@@ -321,7 +321,7 @@ GSCloudPlugin.GetPrinterInfo({
 #### 请求字段说明
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
-| PrinterIndex | 系统打印机索引号。设置-1使用默认打印机 | Int | -1 |
+| PrinterName | 打印机名称。不传值则使用默认打印机 | String | 无 |
 #### 响应字段说明
 属性 | 说明 | 类型
 ----|-----|------
