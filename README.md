@@ -4,7 +4,8 @@
 - 支持超大PDF文件打印，能够快速响应打印。
 - 使用静默方式打印。
 - 读取串口数据，可以应用于电子秤重量读取。
-- 支持浏览器谷歌、火狐、IE7+。
+- 支持谷歌、火狐、IE7+等浏览器。
+- 支持HTTPS协议的站点。
 
 ## 安装
 - [下载地址](https://media.githubusercontent.com/media/gscloudplugin/gscloudplugin/master/setup/光速云插件3.4.6.zip) 当前版本3.4.6
