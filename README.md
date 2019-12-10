@@ -9,7 +9,7 @@
 - 支持HTTPS协议的站点。
 
 ## 安装
-- [下载地址](https://media.githubusercontent.com/media/gscloudplugin/gscloudplugin/master/setup/光速云插件3.4.15.zip) 当前版本3.4.15
+- [下载地址](https://media.githubusercontent.com/media/gscloudplugin/gscloudplugin/master/setup/光速云插件4.0.0.zip) 当前版本4.0.0
 - 解压zip文件后，内含安装包和demo文件
 
 ## 文档
@@ -191,7 +191,11 @@ GSCloudPlugin.PrintDraw({
 | PrinterName | 打印机名称。不传值则使用默认打印机 | String | 无 |
 | Texts | 文本。**该字段也适用于PDF、图片、HTML、Word打印** | Array([Text](#Text的字段说明)) | 无 |
 | Lines | 线条。**该字段也适用于PDF、图片、HTML、Word打印** | Array([Line](#Line的字段说明)) | 无 |
+| Rectangles | 矩形。**该字段也适用于PDF、图片、HTML、Word打印** | Array([Rectangle](#Rectangle的字段说明)) | 无 |
+| Ellipses | 圆形。**该字段也适用于PDF、图片、HTML、Word打印** | Array([Ellipse](#Ellipse的字段说明)) | 无 |
 | Barcodes | 条码。**该字段也适用于PDF、图片、HTML、Word打印** | Array([Barcode](#Barcode的字段说明)) | 无 |
+| Images | 图片。**该字段也适用于PDF、图片、HTML、Word打印** | Array([Image](#Image的字段说明)) | 无 |
+| Htmls | Html。**该字段也适用于PDF、图片、HTML、Word打印** | Array([Html](#Html的字段说明)) | 无 |
 | Cookies | cookie | Array([Cookie](#Cookie的字段说明)) | 无  |
 | HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无  |
 | Copies | 打印文档份数 | Int | 1 |
@@ -200,48 +204,113 @@ GSCloudPlugin.PrintDraw({
 #### Text的字段说明
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
-| Content | 内容| String | 无 |
-| FontSize | 文字大小 | float | 0 |
-| FontFamilies | 字体。取数组中在客户端系统中第一个存在的字体 | Array(String) | 系统字体 |
-| Color | 颜色。RGBA用","隔开 | String | 0,0,0 |
 | X | 起始坐标X。坐标原点为左上方 | float | 0 |
 | Y | 起始坐标Y。坐标原点为左上方 | float | 0 |
-| Width | 文本宽度范围。如果值小于等于0，则为打印纸张宽度 | float | 0 |
-| Height | 文本高度范围。如果值小于等于0，则为一行文本的高度；如果需要多行文本，则将值设置多行的高度，注意：根据字体的不同，一行的高度要大于设置的FontSize的值，参考值：在FontSize的值基础上增加20%，请根据实际情况进行调整 | float | 0 |
+| Width | 文本宽度范围 | float | 0 |
+| Height | 文本高度范围 | float | 0 |
+| Content | 内容| String | 无 |
+| FontSize | 文字大小，单位：PT | float | 10 |
+| FontFamily | 字体 | String | 系统字体 |
+| Color | 颜色。RGBA用","隔开 | String | 0,0,0 |
+| LineSpacing | 行距，单位PT | float | 0 |
 | Trimming | 文本修整方式。值：None（不进行任何修整）、Character（将文本修整成最接近的字符）、Word（将文本修整成最接近的单词）、EllipsisCharacter（将文本修整成最接近的字符，并在被修整的行的末尾插入一个省略号）、EllipsisWord（将文本修整成最接近的单词，并在被修整的行的末尾插入一个省略号）、EllipsisPath（中心从被修整的行移除并用省略号替换） | String | None |
 | Alignment | 文本水平对齐方式。值：Left（左对齐）、Center（居中对齐）、Right（右对齐） | String | Left |
-| VerticalAlignment | 文本垂直对齐方式。值：Top（顶部对齐）、Center（居中对齐）、Bottom（底部对齐） | String | Top |
 | FontStyle | 字体样式。值：Regular（普通文本）、Bold（加粗文本）、Italic（倾斜文本）、Underline（带下划线的文本）、Strikeout（中间有直线通过的文本） | String | Regular |
+| Angle | 角度 | int | 0 |
+| SortIndex | 绘制顺序索引 | int | 0 |
 
 <a href="#Line的字段说明"></a>
 #### Line的字段说明
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
+| X | 起始坐标X。坐标原点为左上方 | float | 0 |
+| Y | 起始坐标Y。坐标原点为左上方 | float | 0 |
+| Width | 文本宽度范围 | float | 0 |
+| Height | 文本高度范围 | float | 0 |
 | DashStyle | 线条样式。值：Solid（实线）、Dash（由划线段组成的直线）、Dot（由点构成的直线）、DashDot（由重复的划线点图案构成的直线）、DashDotDot（由重复的划线点点图案构成的直线）| String | Solid |
 | StrokeWidth | 描边宽度 | float | 0 |
 | Color | 颜色。RGBA用","隔开 | String | 0,0,0 |
-| Points | 点。由很多个点组成线条，如："0,0,10,0,10,10,0,10,0,0" 组成一个正方形，每两个数值组成一个坐标点xy，坐标原点为左上方 | Array(float) | 无 |
+| SortIndex | 绘制顺序索引 | int | 0 |
+
+<a href="#Rectangle的字段说明"></a>
+#### Rectangle的字段说明
+属性 | 说明 | 类型 | 默认值
+----|-----|------|------
+| X | 起始坐标X。坐标原点为左上方 | float | 0 |
+| Y | 起始坐标Y。坐标原点为左上方 | float | 0 |
+| Width | 文本宽度范围 | float | 0 |
+| Height | 文本高度范围 | float | 0 |
+| Color | 颜色。RGBA用","隔开 | String | 0,0,0 |
+| FillColor | 填充色。RGBA用","隔开 | String | 0,0,0 |
+| StrokeWidth | 描边宽度 | float | 0 |
+| DashStyle | 线条样式。值：Solid（实线）、Dash（由划线段组成的直线）、Dot（由点构成的直线）、DashDot（由重复的划线点图案构成的直线）、DashDotDot（由重复的划线点点图案构成的直线）| String | Solid |
+| Angle | 角度 | int | 0 |
+| SortIndex | 绘制顺序索引 | int | 0 |
+
+<a href="#Ellipse的字段说明"></a>
+#### Ellipse的字段说明
+属性 | 说明 | 类型 | 默认值
+----|-----|------|------
+| X | 起始坐标X。坐标原点为左上方 | float | 0 |
+| Y | 起始坐标Y。坐标原点为左上方 | float | 0 |
+| Width | 文本宽度范围 | float | 0 |
+| Height | 文本高度范围 | float | 0 |
+| Color | 颜色。RGBA用","隔开 | String | 0,0,0 |
+| FillColor | 填充色。RGBA用","隔开 | String | 0,0,0 |
+| StrokeWidth | 描边宽度 | float | 0 |
+| DashStyle | 线条样式。值：Solid（实线）、Dash（由划线段组成的直线）、Dot（由点构成的直线）、DashDot（由重复的划线点图案构成的直线）、DashDotDot（由重复的划线点点图案构成的直线）| String | Solid |
+| Angle | 角度 | int | 0 |
+| SortIndex | 绘制顺序索引 | int | 0 |
 
 <a href="#Barcode的字段说明"></a>
 #### Barcode的字段说明
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
-| Width | 条码宽度 | float | 0 |
-| Height | 条码高度 | float | 0 |
-| Format | 条码格式。值：AZTEC、CODABAR、CODE_39、CODE_93、CODE_128、DATA_MATRIX、EAN_8、EAN_13、ITF、MAXICODE、PDF_417、QR_CODE（二维码）、RSS_14、RSS_EXPANDED、UPC_A、UPC_E、All_1D、UPC_EAN_EXTENSION、MSI、PLESSEY、IMB | String | CODE_128 |
 | X | 起始坐标X。坐标原点为左上方 | float | 0 |
 | Y | 起始坐标Y。坐标原点为左上方 | float | 0 |
+| Width | 条码宽度 | float | 0 |
+| Height | 条码高度 | float | 0 |
+| Format | 条码格式。值：Aztec、Codabar、Code39、Code93、Code128、DataMatrix、EAN8、EAN13、ITF、PDF417、QRCode（二维码）、UPCA、UPCE、MSI、PLESSEY | String | Code128 |
 | Text | 文本。 | [BarcodeText](#BarcodeText的字段说明) | 无 |
 | TextPosition | 文本位置。值：Top（在条码的上方）、Bottom（在条码的下方） | String | Bottom  |
+| Angle | 角度 | int | 0 |
+| SortIndex | 绘制顺序索引 | int | 0 |
 
 <a href="#BarcodeText的字段说明"></a>
 #### BarcodeText的字段说明
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
 | Content | 内容。如果不需要显示文本内容，则只设置此字段值，不设置其他字段值 | String | 无 |
-| FontSize | 文字大小 | float | 0 |
-| FontFamilies | 字体。取数组中在客户端系统中第一个存在的字体 | Array(String) | 系统字体 |
+| FontSize | 文字大小。单位：PT | float | 0 |
+| FontFamily | 字体 | String | 系统字体 |
 | Color | 颜色。RGBA用","隔开 | String | 0,0,0 |
+| FontStyle | 字体样式。值：Regular（普通文本）、Bold（加粗文本）、Italic（倾斜文本）、Underline（带下划线的文本）、Strikeout（中间有直线通过的文本） | String | Regular |
+| HideText | 显示条码文本。只对默认带有文本的条码有效 | bool | true |
+
+<a href="#Image的字段说明"></a>
+#### Image的字段说明
+属性 | 说明 | 类型 | 默认值
+----|-----|------|------
+| X | 起始坐标X。坐标原点为左上方 | float | 0 |
+| Y | 起始坐标Y。坐标原点为左上方 | float | 0 |
+| Width | 条码宽度 | float | 0 |
+| Height | 条码高度 | float | 0 |
+| Url | 图片地址或Base64编码 | String |    |
+| ZoomMode | 缩放模式。值：Ratio（比例缩放）、Distortion（变形缩放）、Origin（原始大小。dpi为96） | String |  Ratio  |
+| Angle | 角度 | int | 0 |
+| SortIndex | 绘制顺序索引 | int | 0 |
+
+<a href="#Html的字段说明"></a>
+#### Html的字段说明
+属性 | 说明 | 类型 | 默认值
+----|-----|------|------
+| X | 起始坐标X。坐标原点为左上方 | float | 0 |
+| Y | 起始坐标Y。坐标原点为左上方 | float | 0 |
+| Width | 条码宽度 | float | 0 |
+| Height | 条码高度 | float | 0 |
+| Url | Html地址或Html代码 | String |    |
+| Angle | 角度 | int | 0 |
+| SortIndex | 绘制顺序索引 | int | 0 |
 
 <a href="#下载文件"></a>
 ### 6. 下载文件
