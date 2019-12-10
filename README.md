@@ -9,7 +9,7 @@
 - 支持HTTPS协议的站点。
 
 ## 安装
-- [下载地址](https://media.githubusercontent.com/media/gscloudplugin/gscloudplugin/master/setup/光速云插件3.4.15.zip) 当前版本3.4.15
+- [下载地址](https://media.githubusercontent.com/media/gscloudplugin/gscloudplugin/master/setup/光速云插件4.0.0.zip) 当前版本4.0.0
 - 解压zip文件后，内含安装包和demo文件
 
 ## 文档
@@ -191,11 +191,11 @@ GSCloudPlugin.PrintDraw({
 | PrinterName | 打印机名称。不传值则使用默认打印机 | String | 无 |
 | Texts | 文本。**该字段也适用于PDF、图片、HTML、Word打印** | Array([Text](#Text的字段说明)) | 无 |
 | Lines | 线条。**该字段也适用于PDF、图片、HTML、Word打印** | Array([Line](#Line的字段说明)) | 无 |
-| Rectangles | 图片。**该字段也适用于PDF、图片、HTML、Word打印** | Array([Rectangle](#Rectangle的字段说明)) | 无 |
-| Ellipses | 图片。**该字段也适用于PDF、图片、HTML、Word打印** | Array([Ellipse](#Ellipse的字段说明)) | 无 |
+| Rectangles | 矩形。**该字段也适用于PDF、图片、HTML、Word打印** | Array([Rectangle](#Rectangle的字段说明)) | 无 |
+| Ellipses | 圆形。**该字段也适用于PDF、图片、HTML、Word打印** | Array([Ellipse](#Ellipse的字段说明)) | 无 |
 | Barcodes | 条码。**该字段也适用于PDF、图片、HTML、Word打印** | Array([Barcode](#Barcode的字段说明)) | 无 |
 | Images | 图片。**该字段也适用于PDF、图片、HTML、Word打印** | Array([Image](#Image的字段说明)) | 无 |
-| Htmls | 图片。**该字段也适用于PDF、图片、HTML、Word打印** | Array([Html](#Html的字段说明)) | 无 |
+| Htmls | Html。**该字段也适用于PDF、图片、HTML、Word打印** | Array([Html](#Html的字段说明)) | 无 |
 | Cookies | cookie | Array([Cookie](#Cookie的字段说明)) | 无  |
 | HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无  |
 | Copies | 打印文档份数 | Int | 1 |
@@ -248,7 +248,7 @@ GSCloudPlugin.PrintDraw({
 | SortIndex | 绘制顺序索引 | int | 0 |
 
 <a href="#Ellipse的字段说明"></a>
-#### Rectangle的字段说明
+#### Ellipse的字段说明
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
 | X | 起始坐标X。坐标原点为左上方 | float | 0 |
