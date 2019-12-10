@@ -9,7 +9,7 @@
 - 支持HTTPS协议的站点。
 
 ## 安装
-- [下载地址](https://media.githubusercontent.com/media/gscloudplugin/gscloudplugin/master/setup/光速云插件4.0.0.zip) 当前版本4.0.0
+- [下载地址](https://media.githubusercontent.com/media/gscloudplugin/gscloudplugin/master/setup/光速云插件4.0.1.zip) 当前版本4.0.1
 - 解压zip文件后，内含安装包和demo文件
 
 ## 文档
