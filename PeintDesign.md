@@ -1,6 +1,6 @@
 # 打印设计
 ## 打印设计工作区介绍
-![Image text](https://raw.githubusercontent.com/gscloudplugin/gscloudplugin/master/images/%E6%89%93%E5%8D%B0%E8%AE%BE%E8%AE%A1%E5%B7%A5%E4%BD%9C%E5%8C%BA%E4%BB%8B%E7%BB%8D.jpg)
+![打印设计工作区介绍](https://raw.githubusercontent.com/gscloudplugin/gscloudplugin/master/images/%E6%89%93%E5%8D%B0%E8%AE%BE%E8%AE%A1%E5%B7%A5%E4%BD%9C%E5%8C%BA%E4%BB%8B%E7%BB%8D.jpg)
 
 ## 使用说明
 在js脚本中调用
