@@ -13,8 +13,9 @@
 - 解压zip文件后，内含安装包和demo文件
 
 ## 文档
-- 关于尺寸相关单位统一为：毫米
-- 打印设计功能正在开发中，敬请期待
+- 关于尺寸相关单位在文档中未说明的则统一为：毫米
+- 手持机Android版蓝牙打印正在开发中，敬请期待
+- [打印设计](https://github.com/gscloudplugin/gscloudplugin/blob/master/PeintDesign.md)
 - [打印PDF](#1-打印pdf)
 - [打印图片](#2-打印图片)
 - [打印HTML](#3-打印HTML)
@@ -66,8 +67,6 @@ GSCloudPlugin.PrintPdf({
 | HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无 |
 | Copies | 打印文档份数 | Int | 1 |
 | IsAsync | 是否异步；如果为true，则每打印完一页，就会回调一次；如果为false，则等到全部页打印完，才回调一次。支持浏览器：谷歌、火狐、IE10+ | bool | false |
-| JobMode | 打印任务模式；值：Single(单任务)、Multiple(多任务，适用于一个PDF文件多个页面高度不一样场景) | String | Multiple |
-| Quality | 打印质量；值：Normal(一般质量)、High(高质量)、Low（低质量，打印速度最快） | String | Normal |
 
 <a href="#打印图片"></a>
 ### 2. 打印图片
@@ -199,6 +198,7 @@ GSCloudPlugin.PrintDraw({
 | Cookies | cookie | Array([Cookie](#Cookie的字段说明)) | 无  |
 | HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无  |
 | Copies | 打印文档份数 | Int | 1 |
+| PrintMethod | 打印方式；值：Print（打印）、Preview（预览）、Design（设计） | String | Print |
 
 <a href="#Text的字段说明"></a>
 #### Text的字段说明
