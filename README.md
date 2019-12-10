@@ -14,8 +14,8 @@
 
 ## 文档
 - 关于尺寸相关单位在文档中未说明的则统一为：毫米
-- [打印设计](https://github.com/gscloudplugin/gscloudplugin/blob/master/PeintDesign.md)
 - 手持机Android版蓝牙打印正在开发中，敬请期待
+- [打印设计](https://github.com/gscloudplugin/gscloudplugin/blob/master/PeintDesign.md)
 - [打印PDF](#1-打印pdf)
 - [打印图片](#2-打印图片)
 - [打印HTML](#3-打印HTML)
