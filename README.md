@@ -11,11 +11,11 @@
 
 ## 安装
 - [下载地址](https://media.githubusercontent.com/media/gscloudplugin/gscloudplugin/master/setup/光速云插件4.0.1.zip) 当前版本4.0.1
+- [Android版下载地址](https://media.githubusercontent.com/media/gscloudplugin/gscloudplugin/master/setup/android/光速云插件1.0.0.zip) 当前版本1.0.0，支持蓝牙打印机：佳博、芝柯、斑马，支持Wifi打印机：斑马
 - 解压zip文件后，内含安装包和demo文件
 
 ## 文档
 - 关于尺寸相关单位在文档中未说明的则统一为：毫米
-- 手持机Android版蓝牙打印正在开发中，敬请期待
 - [打印设计](https://github.com/gscloudplugin/gscloudplugin/blob/master/PrintDesign.md)
 - [打印PDF](#1-打印pdf)
 - [打印图片](#2-打印图片)
