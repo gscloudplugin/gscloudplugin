@@ -7,6 +7,7 @@
 - 读取串口数据，可以应用于电子秤重量读取。
 - 支持谷歌、火狐、IE7+等浏览器。
 - 支持HTTPS协议的站点。
+- 跨平台，支持Windows、Linux、Mac系统
 
 ## 安装
 - [下载地址](https://gitee.com/gscloudplugin/gscloudplugin/raw/master/setup/光速云插件4.0.9.zip) 当前版本4.0.9
