@@ -1,6 +1,5 @@
 # 光速云插件
 - 联系QQ：623105084
-- 如果访问或下载缓慢，请使用[码云](https://gitee.com/gscloudplugin/gscloudplugin/blob/master/README.md)
 ## 特点
 - 免费浏览器打印PDF/HTML/图片/Word文档/自定义绘图。
 - 支持超大PDF文件打印，能够快速响应打印。
@@ -10,8 +9,9 @@
 - 支持HTTPS协议的站点。
 
 ## 安装
-- [下载地址](https://media.githubusercontent.com/media/gscloudplugin/gscloudplugin/master/setup/光速云插件4.0.4.zip) 当前版本4.0.4
-- [Android版下载地址](https://media.githubusercontent.com/media/gscloudplugin/gscloudplugin/master/setup/android/光速云插件1.0.1.zip) 当前版本1.0.1，支持蓝牙打印机：佳博、芝柯、斑马，支持Wifi打印机：斑马
+- [下载地址](https://gitee.com/gscloudplugin/gscloudplugin/raw/master/setup/光速云插件4.0.9.zip) 当前版本4.0.9
+- [Linux版下载地址](https://gitee.com/gscloudplugin/gscloudplugin/raw/master/setup/linux/gscloudplugin_1.0.1.zip) 当前版本1.0.1
+- [Android版下载地址](https://gitee.com/gscloudplugin/gscloudplugin/raw/master/setup/android/光速云插件1.0.1.zip) 当前版本1.0.1，支持蓝牙打印机：佳博、芝柯、斑马，支持Wifi打印机：斑马
 - 解压zip文件后，内含安装包和demo文件
 
 ## 文档
