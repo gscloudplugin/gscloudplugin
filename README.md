@@ -10,7 +10,7 @@
 - 跨平台，支持Windows、Linux、Mac系统
 
 ## 安装
-- [下载地址](https://gitee.com/gscloudplugin/gscloudplugin/raw/master/setup/光速云插件4.0.9.zip) 当前版本4.0.9
+- [下载地址](https://gitee.com/gscloudplugin/gscloudplugin/raw/master/setup/光速云插件5.0.0.zip) 当前版本5.0.0
 - [Linux版下载地址](https://gitee.com/gscloudplugin/gscloudplugin/raw/master/setup/linux/gscloudplugin_1.0.1.zip) 当前版本1.0.1
 - [Android版下载地址](https://gitee.com/gscloudplugin/gscloudplugin/raw/master/setup/android/光速云插件1.0.1.zip) 当前版本1.0.1，支持蓝牙打印机：佳博、芝柯、斑马，支持Wifi打印机：斑马
 - 解压zip文件后，内含安装包和demo文件
