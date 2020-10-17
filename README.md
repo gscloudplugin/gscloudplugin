@@ -5,13 +5,14 @@
 - 免费浏览器打印PDF/HTML/图片/Word文档/Excel/PPT/指令打印/自定义绘图。
 - 支持超大PDF文件打印，能够快速响应打印。
 - 使用静默方式打印。
-- 读取串口数据，可以应用于电子秤重量读取。
+- 读取串口数据。
+- 读取电子秤重量。
 - 支持谷歌、火狐、IE7+等浏览器。
 - 支持HTTPS协议的站点。
-- 跨平台，支持Windows、Linux、Mac系统
+- 跨平台，支持Windows、Linux、Mac、Android系统
 
 ## 安装
-- [下载地址](https://gitee.com/gscloudplugin/gscloudplugin/raw/master/setup/光速云插件5.0.4.zip) 当前版本5.0.4
+- [Windows版下载地址](https://gitee.com/gscloudplugin/gscloudplugin/raw/master/setup/光速云插件5.0.5.zip) 当前版本5.0.5
 - [Linux版下载地址](https://gitee.com/gscloudplugin/gscloudplugin/raw/master/setup/linux/gscloudplugin_1.0.1.zip) 当前版本1.0.1
 - [Android版下载地址](https://gitee.com/gscloudplugin/gscloudplugin/raw/master/setup/android/光速云插件1.0.1.zip) 当前版本1.0.1，支持蓝牙打印机：佳博、芝柯、斑马，支持Wifi打印机：斑马
 - 解压zip文件后，内含安装包和demo文件
