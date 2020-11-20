@@ -14,6 +14,7 @@
 ## 安装
 - [Windows版下载地址](https://gitee.com/gscloudplugin/gscloudplugin/raw/master/setup/光速云插件5.0.5.zip) 当前版本5.0.5
 - [Linux版下载地址](https://gitee.com/gscloudplugin/gscloudplugin/raw/master/setup/linux/gscloudplugin_1.0.1.zip) 当前版本1.0.1
+- [Mac版下载地址](https://gitee.com/gscloudplugin/gscloudplugin/raw/master/setup/mac/gscloudplugin_v1.0.1.dmg) 当前版本1.0.1
 - [Android版下载地址](https://gitee.com/gscloudplugin/gscloudplugin/raw/master/setup/android/光速云插件1.0.1.zip) 当前版本1.0.1，支持蓝牙打印机：佳博、芝柯、斑马，支持Wifi打印机：斑马
 - 解压zip文件后，内含安装包和demo文件
 
@@ -37,6 +38,7 @@
 - [写入数据行到串口](#15-写入数据行到串口)
 - [写入字节数据到串口](#16-写入字节数据到串口)
 - [客户端直接通过http方式调用光速云打印插件](#17-客户端直接通过http方式调用光速云打印插件)
+- [Vue项目中调用插件](#18-Vue项目中调用插件)
 
 <a href="#打印PDF"></a>
 ### 1. 打印PDF
@@ -70,6 +72,8 @@ GSCloudPlugin.PrintPdf({
 | HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无 |
 | Copies | 打印文档份数 | Int | 1 |
 | IsAsync | 是否异步；如果为true，则每打印完一页，就会回调一次；如果为false，则等到全部页打印完，才回调一次。支持浏览器：谷歌、火狐、IE10+ | bool | false |
+| Duplex | 双面打印 | String | Default（打印机默认的双面打印设置）、Simplex（单面打印）、Vertical（双面垂直打印）、Horizontal（双面水平打印） |
+| PaperSource | 纸张来源 | String |  |
 
 <a href="#打印图片"></a>
 ### 2. 打印图片
@@ -99,6 +103,8 @@ GSCloudPlugin.PrintImage({
 | Cookies | cookie | Array([Cookie](#Cookie的字段说明)) | 无  |
 | HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无  |
 | Copies | 打印文档份数 | Int | 1 |
+| Duplex | 双面打印 | String | Default（打印机默认的双面打印设置）、Simplex（单面打印）、Vertical（双面垂直打印）、Horizontal（双面水平打印） |
+| PaperSource | 纸张来源 | String |  |
 
 <a href="#打印HTML"></a>
 ### 3. 打印HTML
@@ -128,7 +134,8 @@ GSCloudPlugin.PrintHtml({
 | Cookies | cookie | Array([Cookie](#Cookie的字段说明)) | 无  |
 | HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无  |
 | Copies | 打印文档份数 | Int | 1 |
-
+| Duplex | 双面打印 | String | Default（打印机默认的双面打印设置）、Simplex（单面打印）、Vertical（双面垂直打印）、Horizontal（双面水平打印） |
+| PaperSource | 纸张来源 | String |  |
 
 <a href="#打印Word文档"></a>
 ### 4. 打印Word文档
@@ -202,6 +209,8 @@ GSCloudPlugin.PrintDraw({
 | HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无  |
 | Copies | 打印文档份数 | Int | 1 |
 | PrintMethod | 打印方式；值：Print（打印）、Preview（预览）、Design（设计） | String | Print |
+| Duplex | 双面打印 | String | Default（打印机默认的双面打印设置）、Simplex（单面打印）、Vertical（双面垂直打印）、Horizontal（双面水平打印） |
+| PaperSource | 纸张来源 | String |  |
 
 <a href="#Text的字段说明"></a>
 #### Text的字段说明
@@ -598,3 +607,15 @@ Content-Type：application/json
 ----|-----|------|------
 | Key | 键。必填，否则无效；值：CacheControl、Authorization、Cookie、Referer | String | 无 |
 | Value | 值。必填，否则无效 | String | 无 |
+
+<a href="#Vue项目中调用插件"></a>
+### 18. Vue项目中调用插件
+[下载GSCloudPluginFuncs.js压缩包文件](https://gitee.com/gscloudplugin/gscloudplugin/raw/master/GSCloudPluginFuncs.zip)
+#### 在项目中引用js文件
+```
+import {getGSCloudPlugin} from './GSCloudPluginFuncs'
+```
+#### 获取GSCloudPlugin对象
+```
+let GSCloudPlugin = getGSCloudPlugin();
+```
