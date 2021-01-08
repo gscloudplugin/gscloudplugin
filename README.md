@@ -12,8 +12,8 @@
 - 跨平台，支持Windows、Linux、Mac、Android系统
 
 ## 安装
-- [Windows7+版下载地址](https://gitee.com/gscloudplugin/file/raw/master/windows/光速云插件5.1.0-win7.zip) 当前版本5.1.0
-- [WindowsXP版下载地址](https://gitee.com/gscloudplugin/file/raw/master/windows/光速云插件5.1.0-winxp.zip) 当前版本5.1.0
+- [Windows7+版下载地址](https://gitee.com/gscloudplugin/file/raw/master/windows/光速云插件5.1.1-win7.zip) 当前版本5.1.1
+- [WindowsXP版下载地址](https://gitee.com/gscloudplugin/file/raw/master/windows/光速云插件5.1.1-winxp.zip) 当前版本5.1.1
 - [Linux版下载地址](https://gitee.com/gscloudplugin/gscloudplugin/raw/master/setup/linux/gscloudplugin_1.0.2.deb) 当前版本1.0.2
 - [Mac版下载地址](https://gitee.com/gscloudplugin/gscloudplugin/raw/master/setup/mac/gscloudplugin_v1.0.2.pkg) 当前版本1.0.2
 - [Android版下载地址](https://gitee.com/gscloudplugin/gscloudplugin/raw/master/setup/android/光速云插件1.0.1.zip) 当前版本1.0.1，支持蓝牙打印机：佳博、芝柯、斑马，支持Wifi打印机：斑马
@@ -66,6 +66,7 @@ GSCloudPlugin.PrintPdf({
 | Height | 纸张高度。单位毫米；值为0时，打印高度自适应，应用于连续纸张 | Int | 0 |
 | Url | PDF文件地址 | String | 无 |
 | PrinterName | 打印机名称。不传值则使用默认打印机 | String | 无 |
+| PrintMethod | 打印方式；值：Print（打印）、Preview（预览） | String | Print |
 | Pages | 指定打印页码。例：值为"2,5"，指定打印第2、3、4、5页；如果只需打印第2页，设置值为"2" | String | 无 |
 | UseFileCache | 适用于大文件。需要先调用[下载文件](#6-下载文件)或[异步下载文件](#7-异步下载文件)，**注意：并且需要设置Title一致** | bool | false  |
 | RemoveMargin | 移除空白边距。适用于四周有较大的空白边距的不正规PDF文档；当然其他的类型打印也可以使用该参数 | bool | false |
@@ -74,7 +75,8 @@ GSCloudPlugin.PrintPdf({
 | Copies | 打印文档份数 | Int | 1 |
 | IsAsync | 是否异步；如果为true，则每打印完一页，就会回调一次；如果为false，则等到全部页打印完，才回调一次。支持浏览器：谷歌、火狐、IE10+ | bool | false |
 | Duplex | 双面打印 | String | Default（打印机默认的双面打印设置）、Simplex（单面打印）、Vertical（双面垂直打印）、Horizontal（双面水平打印） |
-| PaperSource | 纸张来源 | String |  |
+| PaperSource | 纸张来源 | String | 无 |
+| IsColor | 如果该页应以彩色打印，则为 true；反之，则为 false | Bool | 默认值由打印机决定 |
 
 <a href="#打印图片"></a>
 ### 2. 打印图片
@@ -101,11 +103,13 @@ GSCloudPlugin.PrintImage({
 | Height | 纸张高度。单位毫米；值为0时，打印高度自适应，应用于连续纸张 | Int | 0  |
 | Url | 图片文件地址 | String | 无 |
 | PrinterName | 打印机名称。不传值则使用默认打印机 | String | 无 |
+| PrintMethod | 打印方式；值：Print（打印）、Preview（预览） | String | Print |
 | Cookies | cookie | Array([Cookie](#Cookie的字段说明)) | 无  |
 | HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无  |
 | Copies | 打印文档份数 | Int | 1 |
 | Duplex | 双面打印 | String | Default（打印机默认的双面打印设置）、Simplex（单面打印）、Vertical（双面垂直打印）、Horizontal（双面水平打印） |
-| PaperSource | 纸张来源 | String |  |
+| PaperSource | 纸张来源 | String | 无 |
+| IsColor | 如果该页应以彩色打印，则为 true；反之，则为 false | Bool | 默认值由打印机决定 |
 
 <a href="#打印HTML"></a>
 ### 3. 打印HTML
@@ -132,11 +136,15 @@ GSCloudPlugin.PrintHtml({
 | Height | 纸张高度。单位毫米；值为0时，打印高度自适应，应用于连续纸张 | Int | 0  |
 | Url | HTML网页地址 | String | 无  |
 | PrinterName | 打印机名称。不传值则使用默认打印机 | String | 无 |
+| PrintMethod | 打印方式；值：Print（打印）、Preview（预览） | String | Print |
 | Cookies | cookie | Array([Cookie](#Cookie的字段说明)) | 无  |
 | HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无  |
 | Copies | 打印文档份数 | Int | 1 |
 | Duplex | 双面打印 | String | Default（打印机默认的双面打印设置）、Simplex（单面打印）、Vertical（双面垂直打印）、Horizontal（双面水平打印） |
-| PaperSource | 纸张来源 | String |  |
+| PaperSource | 纸张来源 | String | 无 |
+| ScaleFactor | 设置网页缩放；例：值50，网页缩小50% | Int | 100 |
+| Orientation | 打印方向；值：Auto(自适应)、Portrait(纵向)、Landscape(横向) | String | Auto |
+| IsColor | 如果该页应以彩色打印，则为 true；反之，则为 false | Bool | 默认值由打印机决定 |
 
 <a href="#打印Word文档"></a>
 ### 4. 打印Word文档
@@ -163,6 +171,7 @@ GSCloudPlugin.PrintWord({
 | Height | 纸张高度。单位毫米；值为0时，打印高度自适应，应用于连续纸张 | Int | 0  |
 | Url | Word文档地址 | String | 无  |
 | PrinterName | 打印机名称。不传值则使用默认打印机 | String | 无 |
+| PrintMethod | 打印方式；值：Print（打印）、Preview（预览） | String | Print |
 | Cookies | cookie | Array([Cookie](#Cookie的字段说明)) | 无  |
 | HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无  |
 | Copies | 打印文档份数 | Int | 1 |
@@ -211,7 +220,8 @@ GSCloudPlugin.PrintDraw({
 | Copies | 打印文档份数 | Int | 1 |
 | PrintMethod | 打印方式；值：Print（打印）、Preview（预览）、Design（设计） | String | Print |
 | Duplex | 双面打印 | String | Default（打印机默认的双面打印设置）、Simplex（单面打印）、Vertical（双面垂直打印）、Horizontal（双面水平打印） |
-| PaperSource | 纸张来源 | String |  |
+| PaperSource | 纸张来源 | String | 无 |
+| IsColor | 如果该页应以彩色打印，则为 true；反之，则为 false | Bool | 默认值由打印机决定 |
 
 <a href="#Text的字段说明"></a>
 #### Text的字段说明
