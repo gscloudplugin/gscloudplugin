@@ -12,15 +12,15 @@
 - 跨平台，支持Windows、Linux、Mac、Android系统
 
 ## 安装
-- [Windows7+版下载地址](https://gitee.com/gscloudplugin/file/raw/master/windows/光速云插件5.1.6-win7.zip) 当前版本5.1.6
-- [WindowsXP版下载地址](https://gitee.com/gscloudplugin/file/raw/master/windows/光速云插件5.1.6-winxp.zip) 当前版本5.1.6
+- [Windows7+版下载地址](https://gitee.com/gscloudplugin/file/raw/master/windows/光速云插件5.1.7-win7.zip) 当前版本5.1.7
+- [WindowsXP版下载地址](https://gitee.com/gscloudplugin/file/raw/master/windows/光速云插件5.1.7-winxp.zip) 当前版本5.1.7
 - [Linux版下载地址](https://gitee.com/gscloudplugin/file/raw/master/linux/gscloudplugin_2.0.0.deb) 当前版本2.0.0
 - [Mac版下载地址](https://gitee.com/gscloudplugin/file/raw/master/mac/gscloudplugin_v1.0.2.pkg) 当前版本1.0.2
-- [Android版下载地址](https://gitee.com/gscloudplugin/gscloudplugin/raw/master/setup/android/光速云插件1.0.1.zip) 当前版本1.0.1，支持蓝牙打印机：佳博、芝柯、斑马，支持Wifi打印机：斑马
-- 解压zip文件后，内含安装包和demo文件
+- [Android版下载地址](https://gitee.com/gscloudplugin/file/raw/master/android/光速云插件2.0.0.apk) 当前版本2.0.0，支持蓝牙/WIFI打印机，支持市面上大部分打印机机型
+- Windows版本解压zip文件后，内含安装包和demo文件
 
 ## 文档
-- 关于尺寸相关单位在文档中未说明的则统一为：<font color="#FF0000">毫米</font>
+- 关于尺寸相关单位在文档中未说明的则统一为：`毫米`
 - [打印设计](https://github.com/gscloudplugin/gscloudplugin/blob/master/PrintDesign.md)
 - [打印PDF](#1-打印pdf)
 - [打印图片](#2-打印图片)
