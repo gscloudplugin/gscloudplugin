@@ -12,8 +12,8 @@
 - 跨平台，支持Windows、Linux、Mac、Android系统
 
 ## 安装
-- [Windows7+版下载地址](https://gitee.com/gscloudplugin/file/raw/master/windows/光速云插件5.1.7-win7.zip) 当前版本5.1.7
-- [WindowsXP版下载地址](https://gitee.com/gscloudplugin/file/raw/master/windows/光速云插件5.1.7-winxp.zip) 当前版本5.1.7
+- [Windows7+版下载地址](https://gitee.com/gscloudplugin/file/raw/master/windows/光速云插件5.1.8-win7.zip) 当前版本5.1.8
+- [WindowsXP版下载地址](https://gitee.com/gscloudplugin/file/raw/master/windows/光速云插件5.1.8-winxp.zip) 当前版本5.1.8
 - [Linux版下载地址](https://gitee.com/gscloudplugin/file/raw/master/linux/gscloudplugin_2.0.0.deb) 当前版本2.0.0
 - [Mac版下载地址](https://gitee.com/gscloudplugin/file/raw/master/mac/gscloudplugin_v1.0.2.pkg) 当前版本1.0.2
 - [Android版下载地址](https://gitee.com/gscloudplugin/file/raw/master/android/光速云插件2.0.0.apk) 当前版本2.0.0，支持蓝牙/WIFI打印机，支持市面上大部分打印机机型
