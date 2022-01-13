@@ -1,6 +1,7 @@
 # 光速云插件
 - 联系QQ：623105084
 - [购买无水印版地址](https://item.taobao.com/item.htm?id=558385485374)
+- [官网地址](https://101.33.205.126)
 ## 特点
 - 免费浏览器打印PDF/HTML/图片/Word文档/Excel/PPT/指令打印/自定义绘图。
 - 支持超大PDF文件打印，能够快速响应打印。
@@ -12,16 +13,18 @@
 - 跨平台，支持Windows、Linux、Mac、Android系统
 
 ## 安装
-- [Windows7+版下载地址](https://gitee.com/gscloudplugin/file/raw/master/windows/光速云插件5.1.8-win7.zip) 当前版本5.1.8
-- [WindowsXP版下载地址](https://gitee.com/gscloudplugin/file/raw/master/windows/光速云插件5.1.8-winxp.zip) 当前版本5.1.8
-- [Linux版下载地址](https://gitee.com/gscloudplugin/file/raw/master/linux/gscloudplugin_2.0.0.deb) 当前版本2.0.0
+- [Windows7+版下载地址](https://gitee.com/gscloudplugin/file/raw/master/windows/光速云插件5.4.2-win7.exe) 当前版本5.4.2
+- [WindowsXP版下载地址](https://gitee.com/gscloudplugin/file/raw/master/windows/光速云插件5.4.2-winxp.exe) 当前版本5.4.2
+- [Linux x64版下载地址](https://gitee.com/gscloudplugin/file/raw/master/linux/gscloudplugin_2.0.0_x64.deb) 当前版本2.0.0
+- [Linux arm版下载地址](https://gitee.com/gscloudplugin/file/raw/master/linux/gscloudplugin_2.0.0_arm64.deb) 当前版本2.0.0
 - [Mac版下载地址](https://gitee.com/gscloudplugin/file/raw/master/mac/gscloudplugin_v1.0.2.pkg) 当前版本1.0.2
 - [Android版下载地址](https://gitee.com/gscloudplugin/file/raw/master/android/光速云插件2.0.0.apk) 当前版本2.0.0，支持蓝牙/WIFI打印机，支持市面上大部分打印机机型
-- Windows版本解压zip文件后，内含安装包和demo文件
+- [demo下载](https://gitee.com/gscloudplugin/file/raw/master/GSCloudPluginDemo.zip)
 
 ## 文档
-- 关于尺寸相关单位在文档中未说明的则统一为：`毫米`
-- [打印设计](https://github.com/gscloudplugin/gscloudplugin/blob/master/PrintDesign.md)
+- 关于尺寸相关单位在文档中未说明的则统一为：**毫米**
+- [FAQ](https://gitee.com/gscloudplugin/gscloudplugin/blob/master/FAQ.md)
+- [打印设计](https://gitee.com/gscloudplugin/gscloudplugin/blob/master/PrintDesign.md)
 - [打印PDF](#1-打印pdf)
 - [打印图片](#2-打印图片)
 - [打印HTML](#3-打印HTML)
@@ -214,6 +217,7 @@ GSCloudPlugin.PrintDraw({
 | Ellipses | 圆形。**该字段也适用于PDF、图片、HTML、Word打印** | Array([Ellipse](#Ellipse的字段说明)) | 无 |
 | Barcodes | 条码。**该字段也适用于PDF、图片、HTML、Word打印** | Array([Barcode](#Barcode的字段说明)) | 无 |
 | Images | 图片。**该字段也适用于PDF、图片、HTML、Word打印** | Array([Image](#Image的字段说明)) | 无 |
+| Pdfs | Pdf。**该字段也适用于PDF、图片、HTML、Word打印** | Array([Pdf](#Pdf的字段说明)) | 无 |
 | Htmls | Html。**该字段也适用于PDF、图片、HTML、Word打印** | Array([Html](#Html的字段说明)) | 无 |
 | Cookies | cookie | Array([Cookie](#Cookie的字段说明)) | 无  |
 | HttpHeaders | http头信息 | Array([HttpHeader](#HttpHeader的字段说明)) | 无  |
@@ -316,11 +320,25 @@ GSCloudPlugin.PrintDraw({
 ----|-----|------|------
 | X | 起始坐标X。坐标原点为左上方 | float | 0 |
 | Y | 起始坐标Y。坐标原点为左上方 | float | 0 |
-| Width | 条码宽度 | float | 0 |
-| Height | 条码高度 | float | 0 |
+| Width | 宽度 | float | 0 |
+| Height | 高度 | float | 0 |
 | Url | 图片地址或Base64编码 | String |    |
 | ZoomMode | 缩放模式。值：Ratio（比例缩放）、Distortion（变形缩放）、Origin（原始大小。dpi为96） | String |  Ratio  |
 | Angle | 角度 | int | 0 |
+| SortIndex | 绘制顺序索引 | int | 0 |
+
+<a href="#Pdf的字段说明"></a>
+#### Pdf的字段说明
+属性 | 说明 | 类型 | 默认值
+----|-----|------|------
+| X | 起始坐标X。坐标原点为左上方 | float | 0 |
+| Y | 起始坐标Y。坐标原点为左上方 | float | 0 |
+| Width | 宽度 | float | 0 |
+| Height | 高度 | float | 0 |
+| Url | Pdf地址或Base64编码 | String |    |
+| ZoomMode | 缩放模式。值：Ratio（比例缩放）、Distortion（变形缩放） | String |  Ratio  |
+| LayoutDirection | 布局方向（用于PDF文档多页时，平铺方向）。值：Horizontal（水平）、Vertical（垂直） | String |  Horizontal  |
+| Spacing | 间距（用于PDF文档多页时，之间的间隔）。坐标原点为左上方 | float | 0 |
 | SortIndex | 绘制顺序索引 | int | 0 |
 
 <a href="#Html的字段说明"></a>
@@ -329,8 +347,8 @@ GSCloudPlugin.PrintDraw({
 ----|-----|------|------
 | X | 起始坐标X。坐标原点为左上方 | float | 0 |
 | Y | 起始坐标Y。坐标原点为左上方 | float | 0 |
-| Width | 条码宽度 | float | 0 |
-| Height | 条码高度 | float | 0 |
+| Width | 宽度 | float | 0 |
+| Height | 高度 | float | 0 |
 | Url | Html地址或Html代码 | String |    |
 | Angle | 角度 | int | 0 |
 | SortIndex | 绘制顺序索引 | int | 0 |
