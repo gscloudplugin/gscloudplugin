@@ -1,7 +1,7 @@
 # 光速云插件
 - 联系QQ：623105084
 - [购买无水印版地址](https://item.taobao.com/item.htm?id=558385485374)
-- [官网地址](https://101.33.205.126)
+- [官网地址](https://gsypp.com)
 ## 特点
 - 免费浏览器打印PDF/HTML/图片/Word文档/Excel/PPT/指令打印/自定义绘图。
 - 支持超大PDF文件打印，能够快速响应打印。
