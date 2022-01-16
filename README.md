@@ -3,7 +3,7 @@
 - [购买无水印版地址](https://item.taobao.com/item.htm?id=558385485374)
 - [官网地址](https://gsypp.com)
 ## 特点
-- 免费浏览器打印PDF/HTML/图片/Word文档/Excel/PPT/指令打印/自定义绘图。
+- 免费浏览器打印PDF/HTML/图片/Word文档/Excel/PPT/指令打印/自定义绘图/微软报表。
 - 支持超大PDF文件打印，能够快速响应打印。
 - 使用静默方式打印。
 - 读取串口数据。
@@ -13,8 +13,8 @@
 - 跨平台，支持Windows、Linux、Mac、Android系统
 
 ## 安装
-- [Windows7+版下载地址](https://gitee.com/gscloudplugin/file/raw/master/windows/光速云插件5.4.2-win7.exe) 当前版本5.4.2
-- [WindowsXP版下载地址](https://gitee.com/gscloudplugin/file/raw/master/windows/光速云插件5.4.2-winxp.exe) 当前版本5.4.2
+- [Windows7+版下载地址](https://gitee.com/gscloudplugin/file/raw/master/windows/光速云插件5.5.0-win7.exe) 当前版本5.5.0
+- [WindowsXP版下载地址](https://gitee.com/gscloudplugin/file/raw/master/windows/光速云插件5.5.0-winxp.exe) 当前版本5.5.0
 - [Linux x64版下载地址](https://gitee.com/gscloudplugin/file/raw/master/linux/gscloudplugin_2.0.0_x64.deb) 当前版本2.0.0
 - [Linux arm版下载地址](https://gitee.com/gscloudplugin/file/raw/master/linux/gscloudplugin_2.0.0_arm64.deb) 当前版本2.0.0
 - [Mac版下载地址](https://gitee.com/gscloudplugin/file/raw/master/mac/gscloudplugin_v1.0.2.pkg) 当前版本1.0.2
